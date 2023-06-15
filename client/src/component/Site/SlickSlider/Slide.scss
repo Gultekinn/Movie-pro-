@@ -1,0 +1,82 @@
+.slide {
+  padding: 40px 30px;
+
+  height: 600px;
+
+  border: solid;
+
+  background-color: black;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .slides {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 600px;
+    background-image: url(image-original.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    .sliderss {
+      width: 100%;
+      height: 600px;
+      background-color: rgba(8, 7, 10, 0.615);
+    h1{
+        color: aliceblue;
+        font-size: 60px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    }
+  }
+  .text {
+    width: 70%;
+    height: 400px;
+
+    &__img1 {
+      width: 90%;
+      height: 400px;
+      background-image: url(theavengers_lob_crd_03.jpg);
+      background-size: cover;
+      cursor: pointer;
+      color: white;
+    }
+    &__img2 {
+      width: 90%;
+      height: 400px;
+      background-image: url(barbie_2023_film_poster.jpg);
+      background-size: cover;
+      cursor: pointer;
+    }
+    &__img3 {
+      width: 90%;
+      height: 400px;
+      background-image: url(STL224585.jpg);
+      background-size: cover;
+      cursor: pointer;
+    }
+    &__img4 {
+      width: 90%;
+      height: 400px;
+      background-image: url(spider-man-no-way-home-multiverse-poster.jpg);
+      background-size: cover;
+      cursor: pointer;
+    }
+    &__img5 {
+      width: 90%;
+      height: 400px;
+      background-image: url(Joker_Digital.jpg);
+      background-size: cover;
+      cursor: pointer;
+    }
+    &__img6 {
+      width: 90%;
+      height: 400px;
+      background-image: url(ataturk.jpg);
+      background-size: contain;
+      cursor: pointer;
+    }
+  }
+}
