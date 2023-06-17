@@ -1,0 +1,45 @@
+.common {
+  padding: 185px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+.common__card {
+  padding: 20px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+.common__card__img img {
+  width: 170px;
+  height: 200px;
+}
+.common__card .div {
+  display: flex;
+}
+.common__card .div .old {
+  margin: auto;
+  color: rgb(244, 202, 16);
+  margin-right: 10px;
+}
+.common__card .div #language {
+  color: rgb(244, 202, 16);
+}
+.common__card #ticket {
+  width: 100px;
+  height: 35px;
+  margin-top: 20px;
+  margin: auto;
+  margin-top: 10px;
+  background: linear-gradient(45deg, red, blue);
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}/*# sourceMappingURL=Card.css.map */

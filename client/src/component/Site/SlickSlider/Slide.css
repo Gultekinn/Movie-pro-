@@ -1,0 +1,632 @@
+.slide {
+  padding: 30px 30px;
+  height: 700px;
+  border: solid;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.slide h1 {
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.slide .text {
+  width: 70%;
+  height: 600px;
+  color: white;
+  text-align: center;
+}
+.slide .text #shop {
+  cursor: pointer;
+}
+.slide .text #shop:hover {
+  color: red;
+}
+.slide .text #star {
+  color: rgb(255, 255, 33);
+  cursor: pointer;
+}
+.slide .text .div__icon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.slide .text__img1 {
+  width: 90%;
+  height: 400px;
+  background-image: url(theavengers_lob_crd_03.jpg);
+  background-size: cover;
+  cursor: pointer;
+  color: white;
+}
+.slide .text__img2 {
+  width: 90%;
+  height: 400px;
+  background-image: url(barbie_2023_film_poster.jpg);
+  background-size: cover;
+  cursor: pointer;
+}
+.slide .text__img3 {
+  width: 90%;
+  height: 400px;
+  background-image: url(STL224585.jpg);
+  background-size: cover;
+  cursor: pointer;
+}
+.slide .text__img4 {
+  width: 90%;
+  height: 400px;
+  background-image: url(spider-man-no-way-home-multiverse-poster.jpg);
+  background-size: cover;
+  cursor: pointer;
+}
+.slide .text__img5 {
+  width: 90%;
+  height: 400px;
+  background-image: url(Joker_Digital.jpg);
+  background-size: cover;
+  cursor: pointer;
+}
+.slide .text__img6 {
+  width: 90%;
+  height: 400px;
+  background-image: url(ataturk.jpg);
+  background-size: contain;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1440px) {
+  .slide {
+    display: block;
+    height: 650px;
+  }
+  .slide .text {
+    display: block;
+    width: 60%;
+    height: 400px;
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 1430px) {
+  .slide {
+    display: block;
+    height: 660px;
+  }
+  .slide .text {
+    display: block;
+    width: 50%;
+    height: 400px;
+    text-align: center;
+    font-size: 14px;
+  }
+  .slide .text__img1 {
+    display: block;
+    width: 250px;
+    height: 400px;
+  }
+  .slide .text__img2 {
+    display: block;
+    width: 250px;
+    height: 400px;
+  }
+  .slide .text__img3 {
+    display: block;
+    width: 250px;
+    height: 400px;
+  }
+  .slide .text__img4 {
+    display: block;
+    width: 250px;
+    height: 400px;
+  }
+  .slide .text__img5 {
+    display: block;
+    width: 250px;
+    height: 400px;
+  }
+  .slide .text__img6 {
+    display: block;
+    width: 250px;
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 1414px) {
+  .slide {
+    display: block;
+    height: 600px;
+  }
+  .slide .text {
+    display: block;
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    font-size: 12px;
+  }
+  .slide .text__img1 {
+    display: block;
+    width: 250px;
+    height: 350px;
+  }
+  .slide .text__img2 {
+    display: block;
+    width: 250px;
+    height: 350px;
+  }
+  .slide .text__img3 {
+    display: block;
+    width: 250px;
+    height: 350px;
+  }
+  .slide .text__img4 {
+    display: block;
+    width: 250px;
+    height: 350px;
+  }
+  .slide .text__img5 {
+    display: block;
+    width: 250px;
+    height: 350px;
+  }
+  .slide .text__img6 {
+    display: block;
+    width: 250px;
+    height: 350px;
+  }
+}
+@media only screen and (max-width: 1396px) {
+  .slide {
+    display: block;
+    height: 500px;
+  }
+  .slide .text {
+    display: block;
+    width: 270px;
+    height: 300px;
+    text-align: center;
+    font-size: 10px;
+  }
+  .slide .text__img1 {
+    display: block;
+    width: 220px;
+    height: 280px;
+    background-size: cover;
+  }
+  .slide .text__img2 {
+    display: block;
+    width: 220px;
+    height: 280px;
+    background-size: cover;
+  }
+  .slide .text__img3 {
+    display: block;
+    width: 220px;
+    height: 280px;
+    background-size: cover;
+  }
+  .slide .text__img4 {
+    display: block;
+    width: 220px;
+    height: 280px;
+    background-size: cover;
+  }
+  .slide .text__img5 {
+    display: block;
+    width: 220px;
+    height: 280px;
+    background-size: cover;
+  }
+  .slide .text__img6 {
+    display: block;
+    width: 220px;
+    height: 280px;
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 1350px) {
+  .slide {
+    display: block;
+    height: 500px;
+  }
+  .slide .text {
+    display: block;
+    width: 250px;
+    height: 290px;
+    text-align: center;
+    font-size: 9px;
+  }
+  .slide .text__img1 {
+    display: block;
+    width: 200px;
+    height: 260px;
+    background-size: cover;
+  }
+  .slide .text__img2 {
+    display: block;
+    width: 200px;
+    height: 260px;
+    background-size: cover;
+  }
+  .slide .text__img3 {
+    display: block;
+    width: 200px;
+    height: 260px;
+    background-size: cover;
+  }
+  .slide .text__img4 {
+    display: block;
+    width: 200px;
+    height: 260px;
+    background-size: cover;
+  }
+  .slide .text__img5 {
+    display: block;
+    width: 200px;
+    height: 260px;
+    background-size: cover;
+  }
+  .slide .text__img6 {
+    display: block;
+    width: 200px;
+    height: 260px;
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 1131px) {
+  .slide {
+    display: block;
+    height: 480px;
+  }
+  .slide .text {
+    display: block;
+    width: 230px;
+    height: 260px;
+    text-align: center;
+    font-size: 9px;
+  }
+  .slide .text__img1 {
+    display: block;
+    width: 180px;
+    height: 240px;
+    background-size: cover;
+  }
+  .slide .text__img2 {
+    display: block;
+    width: 180px;
+    height: 240px;
+    background-size: cover;
+  }
+  .slide .text__img3 {
+    display: block;
+    width: 180px;
+    height: 240px;
+    background-size: cover;
+  }
+  .slide .text__img4 {
+    display: block;
+    width: 180px;
+    height: 240px;
+    background-size: cover;
+  }
+  .slide .text__img5 {
+    display: block;
+    width: 180px;
+    height: 240px;
+    background-size: cover;
+  }
+  .slide .text__img6 {
+    display: block;
+    width: 180px;
+    height: 240px;
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .slide {
+    display: block;
+    height: 430px;
+  }
+  .slide .text {
+    display: block;
+    width: 220px;
+    height: 240px;
+    text-align: center;
+    font-size: 9px;
+  }
+  .slide .text__img1 {
+    display: block;
+    width: 170px;
+    height: 220px;
+    background-size: cover;
+  }
+  .slide .text__img2 {
+    display: block;
+    width: 170px;
+    height: 220px;
+    background-size: cover;
+  }
+  .slide .text__img3 {
+    display: block;
+    width: 170px;
+    height: 220px;
+    background-size: cover;
+  }
+  .slide .text__img4 {
+    display: block;
+    width: 170px;
+    height: 220px;
+    background-size: cover;
+  }
+  .slide .text__img5 {
+    display: block;
+    width: 170px;
+    height: 220px;
+    background-size: cover;
+  }
+  .slide .text__img6 {
+    display: block;
+    width: 170px;
+    height: 220px;
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 970px) {
+  .slide {
+    display: block;
+    height: 420px;
+  }
+  .slide .text {
+    display: block;
+    width: 210px;
+    height: 220px;
+    text-align: center;
+    font-size: 9px;
+  }
+  .slide .text #star {
+    font-size: 10px;
+  }
+  .slide .text__img1 {
+    display: block;
+    width: 160px;
+    height: 200px;
+    background-size: cover;
+  }
+  .slide .text__img2 {
+    display: block;
+    width: 160px;
+    height: 200px;
+    background-size: cover;
+  }
+  .slide .text__img3 {
+    display: block;
+    width: 160px;
+    height: 200px;
+    background-size: cover;
+  }
+  .slide .text__img4 {
+    display: block;
+    width: 160px;
+    height: 200px;
+    background-size: cover;
+  }
+  .slide .text__img5 {
+    display: block;
+    width: 160px;
+    height: 200px;
+    background-size: cover;
+  }
+  .slide .text__img6 {
+    display: block;
+    width: 160px;
+    height: 200px;
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 915px) {
+  .slide {
+    display: block;
+    height: 400px;
+  }
+  .slide .text {
+    display: block;
+    width: 200px;
+    height: 210px;
+    text-align: center;
+    font-size: 9px;
+  }
+  .slide .text #star {
+    font-size: 10px;
+  }
+  .slide .text__img1 {
+    display: block;
+    width: 140px;
+    height: 180px;
+    background-size: cover;
+  }
+  .slide .text__img2 {
+    display: block;
+    width: 140px;
+    height: 180px;
+    background-size: cover;
+  }
+  .slide .text__img3 {
+    display: block;
+    width: 140px;
+    height: 180px;
+    background-size: cover;
+  }
+  .slide .text__img4 {
+    display: block;
+    width: 140px;
+    height: 180px;
+    background-size: cover;
+  }
+  .slide .text__img5 {
+    display: block;
+    width: 140px;
+    height: 180px;
+    background-size: cover;
+  }
+  .slide .text__img6 {
+    display: block;
+    width: 140px;
+    height: 180px;
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .slide {
+    display: block;
+    height: 360px;
+  }
+  .slide .text {
+    display: block;
+    width: 180px;
+    height: 190px;
+    text-align: center;
+    font-size: 8px;
+  }
+  .slide .text #star {
+    font-size: 10px;
+  }
+  .slide .text__img1 {
+    display: block;
+    width: 120px;
+    height: 160px;
+    background-size: cover;
+  }
+  .slide .text__img2 {
+    display: block;
+    width: 120px;
+    height: 160px;
+    background-size: cover;
+  }
+  .slide .text__img3 {
+    display: block;
+    width: 120px;
+    height: 160px;
+    background-size: cover;
+  }
+  .slide .text__img4 {
+    display: block;
+    width: 120px;
+    height: 160px;
+    background-size: cover;
+  }
+  .slide .text__img5 {
+    display: block;
+    width: 120px;
+    height: 160px;
+    background-size: cover;
+  }
+  .slide .text__img6 {
+    display: block;
+    width: 120px;
+    height: 160px;
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .slide {
+    display: block;
+    height: 340px;
+  }
+  .slide .text {
+    display: block;
+    width: 170px;
+    height: 180px;
+    text-align: center;
+    font-size: 7px;
+  }
+  .slide .text #star {
+    font-size: 10px;
+  }
+  .slide .text__img1 {
+    display: block;
+    width: 100px;
+    height: 140px;
+    background-size: cover;
+  }
+  .slide .text__img2 {
+    display: block;
+    width: 100px;
+    height: 140px;
+    background-size: cover;
+  }
+  .slide .text__img3 {
+    display: block;
+    width: 100px;
+    height: 140px;
+    background-size: cover;
+  }
+  .slide .text__img4 {
+    display: block;
+    width: 100px;
+    height: 140px;
+    background-size: cover;
+  }
+  .slide .text__img5 {
+    display: block;
+    width: 100px;
+    height: 140px;
+    background-size: cover;
+  }
+  .slide .text__img6 {
+    display: block;
+    width: 100px;
+    height: 140px;
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 590px) {
+  .slide {
+    display: block;
+    height: 330px;
+  }
+  .slide .text {
+    display: block;
+    width: 160px;
+    height: 170px;
+    text-align: center;
+    font-size: 7px;
+  }
+  .slide .text #star {
+    font-size: 6px;
+  }
+  .slide .text__img1 {
+    display: block;
+    width: 90px;
+    height: 120px;
+    background-size: cover;
+  }
+  .slide .text__img2 {
+    display: block;
+    width: 90px;
+    height: 120px;
+    background-size: cover;
+  }
+  .slide .text__img3 {
+    display: block;
+    width: 90px;
+    height: 120px;
+    background-size: cover;
+  }
+  .slide .text__img4 {
+    display: block;
+    width: 90px;
+    height: 120px;
+    background-size: cover;
+  }
+  .slide .text__img5 {
+    display: block;
+    width: 90px;
+    height: 120px;
+    background-size: cover;
+  }
+  .slide .text__img6 {
+    display: block;
+    width: 90px;
+    height: 120px;
+    background-size: cover;
+  }
+}/*# sourceMappingURL=Slide.css.map */

@@ -1,0 +1,31 @@
+.footer{
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(
+        45deg,
+        #12064f,
+        #090953,
+        #060b50,
+        #0a1a69,
+        #111b86
+      
+      );
+      padding: 20px 30px;
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+    &__one{
+&__img{
+    display: flex;
+    gap:20px;
+}
+
+    }
+
+    &__two{
+        #pp{
+color: red;
+text-align: start;
+        }
+    }
+}

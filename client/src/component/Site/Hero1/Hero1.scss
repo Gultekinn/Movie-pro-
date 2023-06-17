@@ -1,0 +1,91 @@
+.Hero {
+  padding: 30px 30px;
+  display: flex;
+  justify-content: center;
+
+  &__button {
+    display: flex;
+    gap: 70px;
+    #btn {
+      width: 200px;
+      height: 50px;
+      cursor: pointer;
+      border-radius: 40px;
+      color: aliceblue;
+      background-color: transparent;
+      font-size: 20px;
+      border: none;
+      background-color: rgb(37, 40, 216);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      box-shadow: rgba(244, 250, 63, 0.16) 0px 3px 6px,
+        rgba(255, 245, 245, 0.23) 0px 3px 6px;
+    }
+    #btn:hover {
+      box-shadow: rgba(237, 255, 98, 0.19) 0px 10px 20px,
+        rgba(239, 255, 116, 0.23) 0px 6px 6px;
+    }
+  }
+}
+#hr {
+  margin: auto;
+  border: 2px solid rgba(255, 255, 255, 0.203);
+  width: 900px;
+  //         background-image: url('https://t4.ftcdn.net/jpg/01/30/48/25/240_F_130482509_CSbvplztj9CyVbYIWZeSDGfQz6cYRjlT.jpg');
+  // background-size: cover;
+  // color: transparent;
+  // -webkit-background-clip: text;
+  // text-transform: uppercase;
+  // font-size: 8rem;
+}
+
+
+.section{
+   
+    width: 90%;
+   background-color: rgb(1, 1, 25);
+   margin: auto;
+   margin-top: 30px;
+   color: white;
+   &__button{
+    padding: 40px 40px;
+display: flex;
+justify-content: center;
+gap: 70px;
+button{
+    width: 140px;
+    height: 30px;
+    border: 1px solid white;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+button:hover{
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+   }
+
+  .header_class{
+  
+    &_label{
+        width: 380px;
+        height: 37px;
+        border-radius: 7px;
+        background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    font-size: 20px;
+    #opti{
+        width: 380px;
+        height: 37px;
+        border-radius: 7px;
+background-color: black; 
+   color: white;
+    border: 1px solid white;
+    font-size: 20px;
+    }
+    }
+  }
+}
