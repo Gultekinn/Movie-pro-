@@ -1,0 +1,85 @@
+.commonn{
+    padding: 40px 40px;
+    display: flex;
+   justify-content: center;
+   &__left{
+    width: 600px;
+    height: 800px;
+    padding: 10px;
+    .card1{
+        width: 450px;
+        height: 300px;
+        border: solid white;
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk0OhH58P9I5k0GaMKO_x3oFszc2vnYKtnlQ&usqp=CAU');
+background-size: cover;
+background-repeat: no-repeat;
+    }
+    .card2{
+        display: flex;
+        gap: 50px;
+        margin-top: 50px;
+&__one{
+    width:200px ;
+    height:300px ;
+    border: solid white;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQypiLd7AZkC2HXWB9xMod51qMet0cHGYpZ7A&usqp=CAU');
+background-size: cover;
+background-repeat: no-repeat;
+}
+&__two{
+    width: 200px;
+    height: 300px;
+    border: solid white;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFXpirUEERN4b8btuOOe6nccK5NmaX9wV4RQ&usqp=CAU');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+    }
+   }
+
+&__right{
+    padding: 10px;
+    .card1{
+        display: flex;
+        gap: 50px;
+        &__one{
+            width: 200px;
+            height: 300px;
+            border: solid white; 
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC0ADNTJKQ0uobA4Eb-8unHgCKNc7EdtgZkA&usqp=CAU');
+            background-size: cover;
+            background-repeat: no-repeat; 
+        }
+        &__two{
+            width: 200px;
+            height: 300px;
+            border: solid white;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTS1-yUI9LPxTv7SJ6dUqakamXMnv0rg9z7g&usqp=CAU');
+            background-size: cover;
+            background-repeat: no-repeat; 
+        }
+    }
+
+    .card2{
+        display: flex;
+        gap: 50px;
+        margin-top: 50px;
+        &__one{
+            width: 200px;
+            height: 300px;
+            border: solid white; 
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiP2nBQOgG-cGVmqrJjCh5qGvFsWFTbmEfIA&usqp=CAU'); 
+       background-repeat: no-repeat;
+       background-size: cover;
+        }
+        &__two{
+            width: 200px;
+            height: 300px;
+            border: solid white;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuEt2dTDRVRq6hmwfxbN_Ra7sy7_Bk0BEUSg&usqp=CAU'); 
+            background-repeat: no-repeat;
+            background-size: cover;
+        }  
+    }
+   }
+}
