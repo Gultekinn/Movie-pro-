@@ -3,7 +3,10 @@ import "../Hero2/Hero2.scss"
 const Hero2 = () => {
   return (
     <>
+        <h1>Movie series
+</h1>   
       <div className="commonn">
+ 
         <div className="commonn__left">
 <div className="card1">
 
