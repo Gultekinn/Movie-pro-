@@ -1,0 +1,21 @@
+.section__text{
+    padding: 40px 40px;
+&__image{
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+.text{
+    font-size: 23px;
+}
+}
+
+.section2__text{
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    .textt{
+        width: 800px;
+        text-align: start;
+    }
+}

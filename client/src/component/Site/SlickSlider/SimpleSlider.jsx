@@ -19,6 +19,12 @@ const SimpleSlider = () => {
           <Slider {...settings}>
             <div className="text">
               <div className="text__img1"></div>
+            <div className="texts">
+              <div>              <button>View Trailer</button>
+</div>
+<div><button>View Details</button></div>
+              
+            </div>
              <h2> Avengers</h2>
              <div className="div__icon">
               <div> <p>  Drama action</p></div>
@@ -32,6 +38,13 @@ const SimpleSlider = () => {
 
             <div className="text">
               <div className="text__img2"></div>
+              <div className="texts">
+              <div>              <button>View Trailer</button>
+</div>
+<div><button>View Details</button></div>
+              
+            </div>
+             
               <h2> Barbie</h2>
              <div className="div__icon">
               <div> <p>Comedy</p></div>
@@ -43,6 +56,12 @@ const SimpleSlider = () => {
 
             <div className="text">
               <div className="text__img3"></div>
+              <div className="texts">
+              <div>              <button>View Trailer</button>
+</div>
+<div><button>View Details</button></div>
+              
+            </div>
               <h2>Secret Invasion</h2>
              <div className="div__icon">
               <div> <p>Action</p></div>
@@ -54,6 +73,12 @@ const SimpleSlider = () => {
 
             <div className="text">
               <div className="text__img4"></div>
+              <div className="texts">
+              <div>              <button>View Trailer</button>
+</div>
+<div><button>View Details</button></div>
+              
+            </div>
               <h2> Spider-Man</h2>
              <div className="div__icon">
               <div> <p> Action</p></div>
@@ -65,6 +90,12 @@ const SimpleSlider = () => {
 
             <div className="text">
               <div className="text__img5"></div>
+              <div className="texts">
+              <div>              <button>View Trailer</button>
+</div>
+<div><button>View Details</button></div>
+              
+            </div>
               <h2>Joker</h2>
              <div className="div__icon">
               <div> <p>  Drama action</p></div>
@@ -76,6 +107,12 @@ const SimpleSlider = () => {
 
             <div className="text">
               <div className="text__img6"></div>
+              <div className="texts">
+              <div>              <button>View Trailer</button>
+</div>
+<div><button>View Details</button></div>
+              
+            </div>
               <h2>Atatürk</h2>
              <div className="div__icon">
               <div> <p>Drama action</p></div>

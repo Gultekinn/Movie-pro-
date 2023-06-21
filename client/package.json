@@ -18,6 +18,7 @@
     "react-router-dom": "^6.12.1",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
+    "react-spinners": "^0.13.8",
     "react-touch-carousel": "^0.10.2",
     "sass": "^1.63.4",
     "styled-components": "^5.3.11",

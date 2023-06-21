@@ -1,0 +1,26 @@
+.commonCard{
+    padding: 50px 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+    .cardd{
+        width: 300px;
+        height: auto;
+        padding: 30px;
+       
+        cursor: pointer;
+        img{
+            width: 300px;
+        }
+        h2{
+            margin-top: 15px;
+            text-align: start;
+        }
+    }
+    .cardd:hover{
+h2{
+    color: red;
+}
+    }
+}

@@ -26,11 +26,7 @@ const Header = () => {
 
        <ul className="list">
         <li><Link id="link" to="">Home</Link></li>
-            <li>
-              <Link id="link" to="movie">
-                Movie
-              </Link>
-            </li>
+           
             <li>
               <Link id="link" to="vip">
                 VIP
@@ -51,7 +47,6 @@ const Header = () => {
                 About us<ArrowDropDownIcon/>
               </Link>
               <ul>
-                <li><Link to="cinema" id="links">about movie pro</Link></li>
               <li><Link to="condition" id="links">rules and conditions</Link></li>
               <li><Link to="rule"  id="links">advertising offers</Link></li>
               </ul>
@@ -73,8 +68,14 @@ const Header = () => {
             </button>
           </div>
           <div>
-            <button id="sign">Sign up</button>
+           <Link to='login'><button id="sign">Login</button></Link> 
           </div>
+
+          <div>
+           <Link to="regist"><button id="sign">Sign up</button></Link> 
+          </div>
+         
+          
         </div>
 
 
