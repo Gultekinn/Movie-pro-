@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../VIP/Vip.scss";
 import VipCard from "../../../component/Site/Vipcard/VipCard";
+import Loading from "../../../component/Loading/Loading";
 const ViP = () => {
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    window.scrollTo({ top: 0 });
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+  }, []);
   return (
+
+    <>
+ {
+      loading ? (
+      <Loading/>
+    ) : (
     <div>
+      
       <div className="section1">
         <img
           src="https://parkcinema.az/addons/shared_addons/themes/new/img/vip-lounge2.jpg"
@@ -97,6 +113,8 @@ const ViP = () => {
 
 <VipCard/>
     </div>
+    )}
+    </>
   );
 };
 

@@ -81,7 +81,7 @@ const Header = () => {
 
 
 <div className="navbar__menu">
-  <button  className="icn"><MenuIcon/></button>
+  <button   className="icn"><MenuIcon/></button>
 
 </div>
 

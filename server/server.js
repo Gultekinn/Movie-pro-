@@ -1,28 +1,17 @@
-const express=require ('express')
-const cors=require("cors")
-const mongoose=require("mongoose")
-const bodyParser=require("body-parser")
-const CinemaRouter=require("./src/routers/CinemaRouter")
-const ContactRouter=require("./src/routers/ContactRouter")
-const FilmRouter=require("./src/routers/FilmRouter")
-const cookiePrser=require("cookie-parser")
-const app=express()
-app.use(express.json())
+const express = require("express")
+const app = express()
+const cors = require("cors")
+const mongoose = require("mongoose")
+const filmRoute = require('./app/routes/Film.route')
 app.use(cors())
 
-app.get("/",async(req,res)=>{
-    res.send('')
+//Db Connection
+mongoose.connect("mongodb+srv://gultekin:<password>@cluster0.ez8varc.mongodb.net/").then(() => {
+    console.log("db connected");
 })
 
-app.use('/cinema', CinemaRouter);
-app.use('/contact', ContactRouter);
-app.use('/film', FilmRouter);
-const PORT=5050
-mongoose.connect("mongodb+srv://gultekin:gultekinn@cluster0.ez8varc.mongodb.net").then((res)=>{
-    console.log("connected")
-})
+app.use('/film',filmRoute)
 
-app.listen(PORT,() =>{
-    console.log(`app running on ${PORT}`)
+app.listen(8080, () => {
+    console.log("server running")
 })
-
