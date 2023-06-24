@@ -5,20 +5,18 @@ const filmValidation = require('../validations/Film.validation')
 const router = express.Router()
 
 //get All
-router.route('/film').get(filmController.getAll)
+router.route('/').get(filmController.getAll)
 // GetById
 router.route('/:id').get(filmController.getById)
 //Add
 router.post(
     '/',
-    store.array('images', 5),
     filmValidation,
     filmController.add,
 )
 //edit
 router.put(
     '/:id',
-    store.array('images', 5),
     filmValidation,
     filmController.edit,
 )

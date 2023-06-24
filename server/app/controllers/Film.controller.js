@@ -1,54 +1,37 @@
 const mongoose = require("mongoose");
 const { Film } = require("../models/Film.model");
-const { storage } = require("../middlewares/multer");
+// const { storage } = require("../middlewares/multer");
 const filmController = {
   getAll: async (req, res) => {
     const films = await Film.find();
-    res.send(lists);
+    res.send(films);
   },
   getById: (req, res) => {
-    let id = req.params.id;
-    Film.findById(id, (err, doc) => {
-      if (!err) {
-        res.json(doc);
-      }
-    });
+  const {id} = req.params;
+   const target =new Film.findById(id)
+   res.send(target)
   },
   add: async (req, res, next) => {
     let film = await new Film({
-      ...req.body,image: req.files[0].filename,
+      filmtype:req.body.filmType.split(",")
     });
     film.save();
   },
   edit: async (req, res) => {
-    let id = req.params.id;
-    const files = req.files;
-    const imageArr = [];
-    for (let i = 0; i < files.length; i++) {
-      imageArr.push(files[i].filename);
-    }
-    Film.findByIdAndUpdate(
-      id,
-      {
-        ...req.body,
-      },
-      function (err, docs) {
-        if (err) {
-          console.log(err);
-        } else {
-          console.log(docs);
-        }
-        res.send("Film Edited");
-      }
-    );
-  },
-  delete: (req, res) => {
-    let id = req.params.id;
-    Film.findByIdAndDelete(id, (err, doc) => {
+    const {id }= req.params;
+   
+    Film.findByIdAndUpdate(id,req.body,(err,doc)=>{
       if (!err) {
-        res.json("Film delete");
-      }
+        res.status(200).json({ message: "Update" })
+    } else {
+        res.status(404).json({ message: err })
+    }
     });
   },
+  delete: async(req, res) => {
+    const {id} = req.params;
+  const newFilm=await  Film.findByIdAndDelete(id);
+ 
+},
 };
 module.exports = { filmController };

@@ -5,7 +5,7 @@ import AppleIcon from "@mui/icons-material/Apple";
 import AndroidIcon from "@mui/icons-material/Android";
 import MenuIcon from '@mui/icons-material/Menu';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 const Header = () => {
   return (
     <>
@@ -52,33 +52,14 @@ const Header = () => {
               </ul>
 
             </li>
-          </ul>
+        <div>
+           <Link id="linkss" to='login'> <AccountCircleIcon/></Link> 
+          </div>  </ul>
 
-
-          <div>
-
-            <button id="icon">
-              <a href="https://apps.apple.com/us/app/park-cinema/id1119977600?ls=1"> <AppleIcon /></a> 
-            
-            </button>
-          </div>
-          <div>
-            <button id="icon">
-             <a href="https://play.google.com/store/apps/details?id=az.parkcinema.app&hl=ru"> <AndroidIcon /></a>
-            </button>
-          </div>
-          <div>
-           <Link to='login'><button id="sign">Login</button></Link> 
-          </div>
-
-          <div>
-           <Link to="regist"><button id="sign">Sign up</button></Link> 
-          </div>
-         
           
-        </div>
-
-
+           
+ </div>
+        
 
 <div className="navbar__menu">
   <button   className="icn"><MenuIcon/></button>

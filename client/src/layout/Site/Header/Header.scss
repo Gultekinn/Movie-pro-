@@ -25,12 +25,12 @@
     display: flex;
     align-items: center;
     gap: 20px;
-
     .list {
       display: flex;
-      font-size: 19px;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
       gap: 1em;
-
       li {
         list-style: none;
         #link {
@@ -136,6 +136,12 @@
 
 #toggler label {
   display: none;
+}
+
+
+#linkss{
+  color: white;
+  font-size: 40px;
 }
 @media only screen and (max-width: 1087px) {
   .navbar__right {

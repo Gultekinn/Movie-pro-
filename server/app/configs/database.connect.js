@@ -1,8 +1,7 @@
 const mongoose = require("mongoose")
-
-const db_url = process.env.URL.replace('<password>', process.env.PASSWORD)
-
 //Db Connection
-mongoose.connect(db_url).then(() => {
-    console.log("db connected");
-})
+const connect = mongoose.connect("mongodb+srv://gultekin:gultekinn@cluster0.ez8varc.mongodb.net/",
+{useNewUrlParser: true}
+)
+
+module.exports=connect

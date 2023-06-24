@@ -5,7 +5,7 @@ const contactValidation = require('../validations/Contact.validation')
 const router = express.Router()
 
 //get All
-router.route('/contact').get(contactController.getAll)
+router.route('/contacts').get(contactController.getAll)
 // GetById
 router.route('/:id').get(contactController.getById)
 //Add

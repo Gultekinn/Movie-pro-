@@ -1,49 +1,59 @@
-const mongoose=require ("mongoose")
-const Film=mongoose.model(
-    'Film',
-    new mongoose.Schema(
-        {
-video:String,
-type:[{
-  type1:String  
-},
-{
-    type2:String
-}],
-
-mainimage:[
-{
-    type:String,
-    isPoster:{
-        type:Boolean,
-        default:false
+const mongoose = require("mongoose");
+const Film = mongoose.model(
+  "Film",
+  new mongoose.Schema({
+    video: {
+      type: String,
     },
-    src:String,
-},
-],
-slideimage:[
-    {
-        type:String,
-        isPoster:{
-            type:Boolean,
-            default:false
-        },
-        src:String,
+    filmType: {
+      type: Array,
     },
-    ],
-date:String,
-language:String,
+    mainimage: {
+      type: String,
+    },
+    slideimage: {
+      type: String,
+    },
+    // mainimage:[
+    // {
+    //     type:String,
+    //     isPoster:{
+    //         type:Boolean,
+    //         default:false
+    //     },
+    //     src:String,
+    // },
+    // ],
+    // slideimage:[
+    //     {
+    //         type:String,
+    //         isPoster:{
+    //             type:Boolean,
+    //             default:false
+    //         },
+    //         src:String,
+    //     },
+    //     ],
+    date: {
+      type: String,
+    },
+    language: {
+      type: String,
+    },
 
-age:Number,
-time:String,
-price:Number,
+    age: {
+      type: Number,
+    },
+    time: {
+      type: String,
+    },
 
-
-
-        },
-        {
-            timestamps:true,
-        }
-    )
-)
-module.exports={Film}
+    price: {
+      type: Number,
+    },
+  }),
+  {
+    timestamps: true
+  }
+);
+module.exports = { Film };

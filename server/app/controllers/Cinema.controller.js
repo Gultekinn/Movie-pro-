@@ -3,64 +3,33 @@ const {Cinema}=require('../models/Cinema.model')
 const {storage} =require("../middlewares/multer")
 
 const cinemaController={
-   getAll:(req,res)=>{
-    Cinema.find({},(err,docs)=>{
-        if(!err){
-            res.json(docs)
-        }else{
-            res.status(500).json(err)
-        }
-    })
-   
+   getAll: async (req,res)=>{
+    const target = await Cinema.find()
+    res.send(target)
 },
-getById:(req,res)=>{
-    let id =req.params.id
-Cinema.findById(id,(err,doc)=>{
-        if(!err){
-            res.json(doc)
-        }
-    })
+getById: async(req,res)=>{
+    const {id} = req.params
+    const target = await Cinema.findById(id)
+    res.send(target)
 },
-add: (req, res, next) => {
-
-    let cinema=new Film({
-        ...req.body,image:req.files[0].filename
+add: async(req, res, next) => {
+    const {filename} = req.body
+    let newCinema = new Cinema({
+        image: req.file.filename,
+        title: req.body.title
     })
-    cinema.save((err,docs)=>{
-        if(!err){
-            res.send(`film created ${docs}`)
-        }
-    })
+    await newCinema.save()
+    res.send(newCinema)
 },
 edit:async(req,res)=>{
-    let id =req.params.id
-    const files=req.files
-    const imageArr=[]
-    for (let i=0; i<files.length;i++){
-        imageArr.push(files[i].filename)
-    }
-    Cinema.findByIdAndUpdate(
-        id,
-        {
-           ...req.body 
-        },
-        function (err,docs){
-            if(err){
-                console.log(err)
-            } else{
-                console.log(docs)
-            }
-            res.send('cinema Edited')
-        },
-    )
+    const {id} = req.params
+    const updateCinema = await Cinema.findByIdAndUpdate(id , req.body)
+    res.send(`${id}'s element has been updated` , updateCinema)
 },
-delete:(req,res)=>{
-    let id =req.params.id
-    Cinema.findByIdAndDelete(id,(err,doc)=>{
-        if(!err){
-            res.json('Cinema delete')
-        }
-    })
-},
+delete: async (req,res)=>{
+    const {id} = req.params
+    await Cinema.findByIdAndDelete(id)
+    res.send(`${id}'s element has been deleted`)
 }
-module.exports={contactController}
+}
+module.exports={cinemaController}

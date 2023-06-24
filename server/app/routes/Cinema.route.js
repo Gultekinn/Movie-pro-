@@ -3,23 +3,35 @@ const { cinemaController } = require('../controllers/Cinema.controller')
 const store = require('../middlewares/multer')
 const cinemaValidation = require('../validations/Cinema.validation')
 const router = express.Router()
+const multer= require('multer')
+
+const storage = multer.diskStorage({
+    destination:(req,file , cb) => {
+        cb(null, "public/");
+    },
+    filename:(req, file , cb) => {
+        cb(null, file.originalname)
+    }
+})
 
 //get All
-router.route('/cinema').get(cinemaController.getAll)
+router.route('/cinemas').get(cinemaController.getAll)
 // GetById
 router.route('/:id').get(cinemaController.getById)
 //Add
 router.post(
     '/',
-    store.array('images', 5),
-    cinemaValidation,
+    // store.array('images', 5),
+    // cinemaValidation,
+    upload.single('image'),
     cinemaController.add,
 )
 //edit
 router.put(
     '/:id',
-    store.array('images', 5),
-    cinemaValidation,
+    // store.array('images', 5),
+    // cinemaValidation,
+    upload.single('image'),
     cinemaController.edit,
 )
 //delete

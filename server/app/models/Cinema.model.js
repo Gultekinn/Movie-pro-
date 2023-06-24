@@ -3,18 +3,8 @@ const Cinema = mongoose.model(
   "Cinema",
   new mongoose.Schema(
     {
-      image: [
-        {
-          type: String,
-          isPoster: {
-            type: Boolean,
-            default: false,
-          },
-          src: String,
-        },
-      ],
-
-      title: String,
+      image: String,
+      title: String
     },
     {
       timestamps: true,

@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../Condition/Condition.scss";
+import Loading from "../../../component/Loading/Loading";
 const Condition = () => {
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    window.scrollTo({ top: 0 });
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+  }, []);
   return (
+    <>
+     {loading ? (
+        <Loading/>
+      ) : (
     <div>
       <div className="hero1">
         <div className="hero11">
@@ -438,6 +451,8 @@ const Condition = () => {
         />
       </div>
     </div>
+      )}
+    </>
   );
 };
 

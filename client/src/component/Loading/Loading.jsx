@@ -1,13 +1,16 @@
 import React from 'react'
 import '../Loading/Loading.scss'
-import RingLoader from 'react-spinners/RingLoader'
+import ScaleLoader from 'react-spinners/ScaleLoader'
 
 
 const Loading = () => {
   return (
     <div className='loader'>
       
-<RingLoader color="#36d7b7" />
+
+     <ScaleLoader color= "#ff0000" />
+     
+
     </div>
   )
 }
