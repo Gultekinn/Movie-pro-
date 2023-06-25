@@ -7,6 +7,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 const Header = () => {
+
+  
   return (
     <>
       <div className="navbar">

@@ -1,6 +1,6 @@
 const mongoose=require ('mongoose')
 const {Cinema}=require('../models/Cinema.model')
-const {storage} =require("../middlewares/multer")
+// const {storage} =require("../middlewares/multer")
 
 const cinemaController={
    getAll: async (req,res)=>{

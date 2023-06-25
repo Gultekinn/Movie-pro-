@@ -1,0 +1,23 @@
+.section1 {
+  padding: 40px 70px;
+  text-align: start;
+}
+.section1 h1 {
+  font-size: 70px;
+}
+
+.section__button div {
+  width: 180px;
+  height: 40px;
+}
+.section__button div button {
+  width: 180px;
+  min-height: 40px;
+  border: 2px solid red;
+  border-radius: 10px;
+  background-color: transparent;
+}
+.section__button div button:hover {
+  background-color: red;
+  color: white;
+}/*# sourceMappingURL=About.css.map */

@@ -1,0 +1,21 @@
+.commonss {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 90px;
+}
+.commonss .cardd {
+  width: 600px;
+  height: auto;
+  display: flex;
+  gap: 20px;
+}
+.commonss .cardd__left img {
+  width: 130px;
+  height: 200px;
+}
+.commonss .cardd__right {
+  width: 400px;
+  height: 200px;
+  text-align: start;
+}/*# sourceMappingURL=vipCard.css.map */

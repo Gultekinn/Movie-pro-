@@ -1,0 +1,24 @@
+#admin-header {
+    width: 100%;
+    border-bottom: 1px solid #e9ecef;
+    height: 80px;
+    position: fixed;
+    z-index: 6;
+    background-color: white;
+    .header {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      .header-body {
+        width: 80%;
+        background-color: #fff;
+        padding: 15px 0;
+        display: flex;
+        column-gap: 8px;
+        align-items: center;
+        margin-left: 310px;
+      
+      }
+        
+    }
+  }

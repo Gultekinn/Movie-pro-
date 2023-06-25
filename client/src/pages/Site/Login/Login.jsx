@@ -27,6 +27,7 @@ const Login = () => {
               type="email"
               className="form-control"
               placeholder="Enter email"
+              value=""
             />
           </div>
           <div className="mb-3">
@@ -35,6 +36,7 @@ const Login = () => {
               type="password"
               className="form-control"
               placeholder="Enter password"
+              value=""
             />
           </div>
 
@@ -44,6 +46,7 @@ const Login = () => {
                 type="checkbox"
                 className="custom-control-input"
                 id="customCheck1"
+                value=""
               />
               <label className="custom-control-label" htmlFor="customCheck1">
                 Remember me
@@ -58,7 +61,7 @@ const Login = () => {
           </div>
           <p className="forgot-password text-right">
             Have a account{" "}
-            <Link onClick={() => naviget("/regist")}>password?</Link>
+            <Link id="ln" onClick={() => naviget("/regist")}>password?</Link>
           </p>
         </form>
       </div>

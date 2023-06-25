@@ -1,0 +1,145 @@
+.section1 {
+  width: 100%;
+}
+.section1 img {
+  width: 100%;
+  height: 400px;
+}
+
+h1 {
+  margin-top: 40px;
+}
+
+.buttons {
+  margin-top: 40px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+.buttons button {
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 40px;
+  color: aliceblue;
+  background-color: transparent;
+  font-size: 20px;
+  border: none;
+  background-color: rgb(37, 40, 216);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: rgba(244, 250, 63, 0.16) 0px 3px 6px, rgba(255, 245, 245, 0.23) 0px 3px 6px;
+}
+.buttons button:hover {
+  background-color: red;
+}
+
+.section2 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.section2__left {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.section2__right .dayline-bar {
+  float: right;
+  width: 961px;
+  height: 17px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("https://parkcinema.az/addons/shared_addons/themes/new/img/dayline.png");
+  margin-top: 19px;
+}
+.section2__right .dayline-bar__hours {
+  height: 20px;
+  margin-top: 26px;
+  display: flex;
+  gap: 23px;
+  font-size: 14px;
+}
+
+.data-table {
+  margin-top: 24px;
+  position: relative;
+  padding: 10px 0 0 0;
+  overflow: auto;
+}
+.data-table .hour-line {
+  position: absolute;
+  top: -10%;
+  left: 203px;
+  height: 110%;
+  width: 1px;
+  background: #adb0a9;
+  z-index: 10;
+}
+.data-table .dt-row {
+  width: 100%;
+  background: #262626;
+  height: 59px;
+  margin-bottom: 2px;
+}
+.data-table .dt-row .dtr-left {
+  float: left;
+  width: 204px;
+  line-height: 15px;
+  padding-left: 35px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.data-table .dt-row .dtr-right {
+  float: right;
+  height: 59px;
+  width: 961px;
+  line-height: 59px;
+}
+.data-table .dt-row .dtr-right .hours {
+  height: 20px;
+  position: relative;
+  color: white;
+}
+.data-table .dt-row .dtr-right .hours .date-table .hours .visible-hour:nth-child(2n+1) {
+  top: 8px;
+}
+.data-table .dt-row .dtr-right .hours .az-version .date-table .hours .visible-hour {
+  font-family: helveticaAZ;
+}
+.data-table .dt-row .dtr-right .hours .date-table .hours .visible-hour {
+  opacity: 1;
+}
+.data-table .dt-row .dtr-right .hours .date-table .hours .t14-5 {
+  left: 255px;
+}
+.data-table .dt-row .dtr-right .hours .date-table .hours .visible-hour {
+  visibility: visible;
+}
+.data-table .dt-row .dtr-right .hours .date-table .hours .visible-hour {
+  position: absolute;
+  float: left;
+  font-family: HelveticaRegular;
+  font-size: 11px;
+  height: 19px;
+  border-radius: 7px;
+  color: white;
+  text-align: center;
+  line-height: 19px;
+  padding: 0 5px;
+  margin: 0;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.data-table .dt-row .dtr-right .hours .visible-hour.vip-session {
+  color: #ffe100 !important;
+}
+.data-table .dt-row .dtr-right .hours .d {
+  background-image: url("https://parkcinema.az/addons/shared_addons/themes/new/img/VIP.png");
+}
+
+.dt-row:nth-child(even) {
+  background: #212121;
+}/*# sourceMappingURL=Vip.css.map */

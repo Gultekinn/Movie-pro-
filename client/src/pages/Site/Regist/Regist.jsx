@@ -30,12 +30,13 @@ const navigate=useNavigate()
             type="text"
             className="form-control"
             placeholder="First name"
+            value=""
           />
         </div>
 
         <div className="mb-3">
           <label>Last name</label>
-          <input id='input' type="text" className="form-control" placeholder="Last name" />
+          <input id='input' type="text" className="form-control" placeholder="Last name"  value=""/>
         </div>
 
         <div className="mb-3">
@@ -45,6 +46,7 @@ const navigate=useNavigate()
             type="email"
             className="form-control"
             placeholder="Enter email"
+            value=''
           />
         </div>
 
@@ -64,7 +66,7 @@ const navigate=useNavigate()
           </button>
         </div>
         <p className="forgot-password text-right">
-          Already registered <Link onClick={()=>navigate('/login')}>sign in?</Link>
+          Already registered <Link id='ln' onClick={()=>navigate('/login')}>sign in?</Link>
         </p>
       </form>
       </div>

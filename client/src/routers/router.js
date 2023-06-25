@@ -66,6 +66,10 @@ export const ROUTES = [
         path:"",
         element:<Dashboard/>
 
-    }]
+    },
+  {
+    path:"contacts",
+    element:<Contact/>
+  }]
   }
 ];

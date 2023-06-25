@@ -1,11 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .slide {
   padding: 30px 30px;
   height: 700px;
-  border: solid;
-  background-color: black;
   display: flex;
   flex-direction: column;
-  gap: 30px;
 }
 .slide h1 {
   color: white;
@@ -16,6 +19,8 @@
   height: 600px;
   color: white;
   text-align: center;
+  position: relative;
+  cursor: pointer;
 }
 .slide .text #shop {
   cursor: pointer;
@@ -39,6 +44,35 @@
   background-size: cover;
   cursor: pointer;
   color: white;
+  transition: 0.5s ease;
+}
+.slide .text .texts {
+  font-size: 1.2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: crimson;
+  width: 90%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 70px;
+  opacity: 0.8;
+  visibility: hidden;
+}
+.slide .text .texts button {
+  width: 200px;
+  height: 50px;
+  background: blue;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+.slide .text .texts button:hover {
+  background: rgb(6, 6, 100);
 }
 .slide .text__img2 {
   width: 90%;
@@ -74,6 +108,9 @@
   background-image: url(ataturk.jpg);
   background-size: contain;
   cursor: pointer;
+}
+.slide .text:hover .texts {
+  visibility: visible;
 }
 
 @media only screen and (max-width: 1440px) {

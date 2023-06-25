@@ -1,0 +1,21 @@
+.section__text {
+  padding: 40px 40px;
+}
+.section__text__image {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+.section__text .text {
+  font-size: 23px;
+}
+
+.section2__text {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+}
+.section2__text .textt {
+  width: 800px;
+  text-align: start;
+}/*# sourceMappingURL=Rule.css.map */

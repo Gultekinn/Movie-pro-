@@ -1,0 +1,23 @@
+.commonCard {
+  padding: 50px 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 70px;
+}
+.commonCard .cardd {
+  width: 300px;
+  height: auto;
+  padding: 30px;
+  cursor: pointer;
+}
+.commonCard .cardd img {
+  width: 300px;
+}
+.commonCard .cardd h2 {
+  margin-top: 15px;
+  text-align: start;
+}
+.commonCard .cardd:hover h2 {
+  color: red;
+}/*# sourceMappingURL=CampCard.css.map */

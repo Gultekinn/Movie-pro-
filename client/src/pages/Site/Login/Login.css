@@ -1,0 +1,49 @@
+.login {
+  background-color: rgb(3, 59, 108);
+  padding: 50px 50px;
+  width: 100%;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  background-color: rgba(240, 248, 255, 0.127);
+  text-align: center;
+  border: 3px solid white;
+  border-radius: 30px;
+}
+form h3 {
+  margin-bottom: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+form #input {
+  height: 40px;
+  width: 350px;
+  border-radius: 20px;
+}
+form p {
+  margin-top: 30px;
+}
+form p #ln {
+  color: red;
+}
+form .mb-3 {
+  text-align: start;
+}
+form button {
+  width: 350px;
+  height: 50px;
+  border: none;
+  font-size: 30px;
+  background: linear-gradient(45deg, #3933ec, #6c91ff, #4d36cf, #84acf0, #391cf3);
+}
+form p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}/*# sourceMappingURL=Login.css.map */

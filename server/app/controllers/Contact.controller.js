@@ -1,65 +1,35 @@
 const mongoose=require ('mongoose')
 const {Contact}=require('../models/Contact.model')
-const {storage}=require("../middlewares/multer")
+// const {storage} =require("../middlewares/multer")
+
 const contactController={
-   getAll:(req,res)=>{
-    Contact.find({},(err,docs)=>{
-        if(!err){
-            res.json(docs)
-        }else{
-            res.status(500).json(err)
-        }
-    })
-   
+   getAll: async (req,res)=>{
+    const target = await Contact.find()
+    res.send(target)
 },
-getById:(req,res)=>{
-    let id =req.params.id
-Contact.findById(id,(err,doc)=>{
-        if(!err){
-            res.json(doc)
-        }
-    })
+getById: async(req,res)=>{
+    const {id} = req.params
+    const target = await Contact.findById(id)
+    res.send(target)
 },
-add: (req, res, next) => {
-    
-    let contact=new Film({
-        ...req.body,image:req.files[0].filename
+add: async(req, res, next) => {
+    const {filename} = req.body
+    let newContact = new Contact({
+        image: req.file.filename,
+        mainPhone: req.body.mainPhone
     })
-    contact.save((err,docs)=>{
-        if(!err){
-            res.send(`film created ${docs}`)
-        }
-    })
+    await newContact.save()
+    res.send(newContact)
 },
 edit:async(req,res)=>{
-    let id =req.params.id
-    const files=req.files
-    const imageArr=[]
-    for (let i=0; i<files.length;i++){
-        imageArr.push(files[i].filename)
-    }
-    Contact.findByIdAndUpdate(
-        id,
-        {
-           ...req.body 
-        },
-        function (err,docs){
-            if(err){
-                console.log(err)
-            } else{
-                console.log(docs)
-            }
-            res.send('contact Edited')
-        },
-    )
+    const {id} = req.params
+    const updateContact = await Contact.findByIdAndUpdate(id , req.body)
+    res.send(`${id}'s element has been updated` , updateContact)
 },
-delete:(req,res)=>{
-    let id =req.params.id
-    Contact.findByIdAndDelete(id,(err,doc)=>{
-        if(!err){
-            res.json('Contact delete')
-        }
-    })
-},
+delete: async (req,res)=>{
+    const {id} = req.params
+    await Contact.findByIdAndDelete(id)
+    res.send(`${id}'s element has been deleted`)
+}
 }
 module.exports={contactController}

@@ -1,66 +1,41 @@
 const mongoose = require('mongoose')
 const { User } = require('../models/User.model')
-const { storage } = require("../middlewares/multer")
+// const { storage } = require("../middlewares/multer")
 
 const userController = {
-    getAll: (req, res) => {
-        User.find({}, (err, docs) => {
-            if (!err) {
-                res.json(docs)
-            } else {
-                res.status(500).json(err)
-            }
-        })
+    getAll: async (req, res) => {
+        const target = await User.find()
+        res.send(target)
 
     },
-    getById: (req, res) => {
-        let id = req.params.id
-        User.findById(id, (err, doc) => {
-            if (!err) {
-                res.json(doc)
-            }
-        })
+    getById: async (req, res) => {
+        const { id } = req.params
+        const target = await User.findById(id)
+        res.send(target)
     },
-    add: (req, res, next) => {
 
-        let user=new User({
-            ...req.body,image:req.files[0].filename
-        })
-        user.save((err,docs)=>{
-            if(!err){
-                res.send(`user created ${docs}`)
-            }
-        })
-    },
-    edit: async (req, res) => {
-        let id = req.params.id
-        const files = req.files
-        const imageArr = []
-        for (let i = 0; i < files.length; i++) {
-            imageArr.push(files[i].filename)
-        }
-        User.findByIdAndUpdate(
-            id,
-            {
-                ...req.body
-            },
-            function (err, docs) {
-                if (err) {
-                    console.log(err)
-                } else {
-                    console.log(docs)
-                }
-                res.send('User Edited')
-            },
-        )
-    },
-    delete: (req, res) => {
-        let id = req.params.id
-        User.findByIdAndDelete(id, (err, doc) => {
-            if (!err) {
-                res.json('User delete')
-            }
-        })
+    // add: async (req, res, next) => {
+    //     const { filename } = req.body
+    //     let newUsers = new User({
+    //         username: req.body.username,
+    //         email: req.body.email,
+    //         password: req.body.password,
+    //         isAdmin: req.body.isAdmin,
+    //     })
+    //     await newUsers.save()
+    //     res.send(newUsers)
+    // },
+
+    // edit: async (req, res) => {
+    //     const { id } = req.params
+    //     const updateUser = await User.findByIdAndUpdate(id, req.body);
+    //     res.send(`${id}'li element has been updated`, updateUser)
+    // },
+    
+    delete: async(req, res) => {
+        const { id } = req.params
+        await User.findByIdAndDelete(id)
+        res.send(`${id}'s user has been deleted`)
     },
 }
 module.exports = { userController }

@@ -1,0 +1,23 @@
+#admin-header {
+  width: 100%;
+  border-bottom: 1px solid #e9ecef;
+  height: 80px;
+  position: fixed;
+  z-index: 6;
+  background-color: white;
+}
+#admin-header .header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+#admin-header .header .header-body {
+  width: 80%;
+  background-color: #fff;
+  padding: 15px 0;
+  display: flex;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  align-items: center;
+  margin-left: 310px;
+}/*# sourceMappingURL=Header.css.map */
