@@ -5,7 +5,6 @@ const Film = mongoose.model(
     {
       filmType: Array,
       mainimage: String,
-      slideimage: String,
       video: String,
       date: String,
       age: Number,

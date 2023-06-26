@@ -3,6 +3,7 @@ import "../Campaign/Campaign.scss"
 import CampaingCard from '../../../component/Site/CampaingCard/CampaingCard'
 import Loading from '../../../component/Loading/Loading';
 const Campaign = () => {
+  const [data,setData]=useState([])
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
@@ -11,6 +12,9 @@ const Campaign = () => {
       setLoading(false);
     }, 1500);
   }, []);
+
+
+ 
   return (
     <>
      {

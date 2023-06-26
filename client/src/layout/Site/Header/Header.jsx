@@ -11,6 +11,7 @@ const Header = () => {
   
   return (
     <>
+    
       <div className="navbar">
         
         <div className="navbar__left">
@@ -57,6 +58,10 @@ const Header = () => {
         <div>
            <Link id="linkss" to='login'> <AccountCircleIcon/></Link> 
           </div>  </ul>
+
+
+
+
 
           
            

@@ -24,7 +24,7 @@ add: async(req, res, next) => {
 edit:async(req,res)=>{
     const {id} = req.params
     const updateCinema = await Cinema.findByIdAndUpdate(id , req.body)
-    res.send(`${id}'s element has been updated` , updateCinema)
+    res.send(updateCinema)
 },
 delete: async (req,res)=>{
     const {id} = req.params

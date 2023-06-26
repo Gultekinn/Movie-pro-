@@ -12,19 +12,24 @@ const filmController = {
     const target = await Film.findById(id);
     res.send(target);
   },
-  add: async (req, res, next) => {
-    const { filename } = req.body;
+  add: async (req, res) => {
+    const mainImageFiles = req.files['mainimage'];
+
+    if (!mainImageFiles || mainImageFiles.length === 0) {
+      return res.status(400).json({ error: 'No image files uploaded' });
+    }
+
+    const mainImage = mainImageFiles[0].filename;
+
     let newFilm = new Film({
       filmType: req.body.filmType.split(","),
-      mainimage: req.file.filename,
-      slideimage: req.file.filename,
+      mainimage: mainImage,
       video: req.body.video,
       date: req.body.date,
       age: req.body.age,
       time: req.body.time,
       languageType: req.body.languageType.split(","),
       price: req.body.price,
-
     });
     await newFilm.save();
     res.send(newFilm);
@@ -32,7 +37,7 @@ const filmController = {
   edit: async (req, res) => {
     const { id } = req.params;
     const updateFilm = await Film.findByIdAndUpdate(id, req.body);
-    res.send(`${id}'s element has been updated`, updateFilm);
+    res.send(updateFilm);
   },
   delete: async (req, res) => {
     const { id } = req.params;

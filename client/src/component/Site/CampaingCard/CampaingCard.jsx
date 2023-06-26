@@ -1,62 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "../CampaingCard/CampCard.scss"
+import axios from 'axios'
 const CampaingCard = () => {
+        const[data,setData]=useState([])
+        useEffect(()=>{
+                axios.get('http://localhost:8080/cinemas').then((res)=>{
+                  setData(res.data)
+                })
+              })
   return (
     <div>
+        
       <div className="commonCard">
-        <div className="cardd">
+        {
+                data && data.map((item,index)=>{
+                        return(
+                                    <div className="cardd">
             
-                <img src="https://mobile.parkcinema.az/structures/uploaded/view/8859" alt="" />
-                        <h2>Ad günün mübarək əziz dost</h2>
+                <img src={`http://localhost:8080/public/${item.image}`} alt="img" />
+                        <h2>{item.title}</h2>
 
-        </div>
-
-
-        <div className="cardd">
-            
-                <img src="https://mobile.parkcinema.az/structures/uploaded/view/12329" alt="" />
-                        <h2>IMAX 8AZN</h2>
-
-        </div>
+        </div>       
+                        )
+                })
+      
+        }
+       
 
 
-        <div className="cardd">
-            
-            <img src="https://mobile.parkcinema.az/structures/uploaded/view/12445" alt="" />
-                    <h2>Super gün</h2>
 
-    </div>
-
-
-    <div className="cardd">
-            
-            <img src="https://mobile.parkcinema.az/structures/uploaded/view/12328" alt="" />
-                    <h2>Xoşbəxt saatlar.Hərgün endirim!</h2>
-
-    </div>
-    
-
-    <div className="cardd">
-            
-            <img src="https://mobile.parkcinema.az/structures/uploaded/view/12331" alt="" />
-                    <h2>Ailə tarifi</h2>
-
-    </div>
-
-    <div className="cardd">
-            
-            <img src="https://mobile.parkcinema.az/structures/uploaded/view/12332" alt="" />
-                    <h2>Tələbə tarifi</h2>
-
-    </div>
-
-
-    <div className="cardd">
-            
-            <img src="https://mobile.parkcinema.az/structures/uploaded/view/8967" alt="" />
-                    <h2>Bonussimo</h2>
-
-    </div>
       </div>
     </div>
   )

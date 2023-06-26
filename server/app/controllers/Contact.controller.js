@@ -24,7 +24,7 @@ add: async(req, res, next) => {
 edit:async(req,res)=>{
     const {id} = req.params
     const updateContact = await Contact.findByIdAndUpdate(id , req.body)
-    res.send(`${id}'s element has been updated` , updateContact)
+    res.send(updateContact)
 },
 delete: async (req,res)=>{
     const {id} = req.params
