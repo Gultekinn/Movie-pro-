@@ -23,13 +23,17 @@ router.route("/:id").get(filmController.getById);
 router.post(
   "/",
   upload.fields([
-    { name: "mainimage", maxCount: 1 }
+    { name: 'mainimage', maxCount: 1 },
+    { name: 'slideimage', maxCount: 1 }
   ]),
   filmController.add
 );
 
 //edit
-router.put("/:id", upload.single("image"), filmController.edit);
+router.put("/:id", upload.fields([
+  { name: 'mainimage', maxCount: 1 },
+  { name: 'slideimage', maxCount: 1 }
+]), filmController.edit);
 
 //delete
 router.route("/:id").delete(filmController.delete);

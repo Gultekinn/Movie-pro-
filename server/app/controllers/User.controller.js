@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const { User } = require('../models/User.model')
+const { User } = require('../models/UserModel')
 // const { storage } = require("../middlewares/multer")
 
 const userController = {

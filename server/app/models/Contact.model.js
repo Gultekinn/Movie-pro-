@@ -4,7 +4,8 @@ const Contact = mongoose.model(
   new mongoose.Schema(
   {
     image:String,
-    mainPhone:String
+    mainPhone:String,
+    address:String
   },
   {
     timestamps:true,

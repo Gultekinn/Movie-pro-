@@ -16,7 +16,8 @@ add: async(req, res, next) => {
     const {filename} = req.body
     let newContact = new Contact({
         image: req.file.filename,
-        mainPhone: req.body.mainPhone
+        mainPhone: req.body.mainPhone,
+        address:req.body.address
     })
     await newContact.save()
     res.send(newContact)

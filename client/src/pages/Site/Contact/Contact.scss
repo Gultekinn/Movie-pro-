@@ -24,11 +24,12 @@
 #body::after {
   content: "";
   position: absolute;
+
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.945);
 }
 
 section {
@@ -37,25 +38,12 @@ section {
   z-index: 3;
   padding-top: 50px;
   padding-bottom: 50px;
-}
+  h1{
+font-family: Georgia, 'Times New Roman', Times, serif;}
+
+  }
 
 
-
-.section-header {
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-.section-header h2 {
-  color: #FFF;
-  font-weight: bold;
-  font-size: 3em;
-  margin-bottom: 20px;
-}
-
-.section-header p {
-  color: #FFF;
-}
 
 .row  {
     width: 600px;
@@ -64,25 +52,43 @@ section {
   flex-wrap: wrap;
   align-items: center;
   gap: 15px;
-  border: 1px solid white;
   margin-right: 300px;
  
 }
 
-.contact-info {
+.parkbulvar{
   width: 300px;
-  border: 1px solid;
+display: none;
 }
+.metropark{
+  width: 300px;
+  display: none;
+}
+.flametower{
+  width: 300px;
+  display: none;
+}
+.zaqulba{
+  width: 300px;
+  display: none;
+}
+
+
+
+
+
+
 
 .contact-info-item {
   display: flex;
   margin-bottom: 30px;
+justify-content: start;
 }
 
 .contact-info-icon {
   height: 70px;
   width: 70px;
-  background-color: #fff;
+  background-color: #453d3d;
   text-align: center;
   border-radius: 50%;
 }
@@ -94,6 +100,7 @@ section {
 
 .contact-info-content {
   margin-left: 10px;
+  text-align: start;
 }
 
 .contact-info-content h4 {
@@ -196,3 +203,39 @@ section {
     width: 100%;
   }
 }
+
+
+
+
+.commonns{
+  width: 150vh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button{
+  margin-top: 40px;
+  display: flex;
+justify-content: center;
+gap: 40px;
+button{
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: 500;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: linear-gradient(
+    45deg,
+    #4c46e6,
+    #6863fb,
+    #9554fe,
+    #b03dff,
+    #9905ff
+    
+  );
+
+}}
