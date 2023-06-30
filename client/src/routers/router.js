@@ -3,13 +3,18 @@ import Contact from "../pages/Site/Contact/Contact";
 import ViP from "../pages/Site/VIP/ViP";
 import Campaign from "../pages/Site/Campaign/Campaign";
 import About from "../pages/Site/About/About";
-import AdminRoot from "../AdminRoot/AdminRoot";
-import Dashboard from "../pages/Admin/Dashboard/Dashboard";
 import Condition from "../pages/Site/Condition/Condition";
 import Rule from "../pages/Site/Rule/Rule";
 import Home from "../pages/Site/Home/Home";
 import Login from "../pages/Site/Login/Login";
 import Regist from "../pages/Site/Regist/Regist";
+import Dashboard from "../pages/Admin/Dashboard/Dashboard";
+import MovieTable from "../pages/Admin/MovieTable/MovieTable";
+import ActivityTable from "../pages/Admin/ActivityTable/ActivityTable";
+import ContactTable from "../pages/Admin/ContactTable/ContactTable";
+import UserData from "../pages/Admin/UserTable/UserData";
+import AdminRoot from "../pages/Admin/AdminRoot/AdminRoot";
+
 
 export const ROUTES = [
   {
@@ -57,19 +62,38 @@ export const ROUTES = [
       }
 
     ],
+
+  },
+    {
+      path: "/admin",
+      element: <AdminRoot/>,
+      children: [
+        {
+          path: "",
+          element:<Dashboard/>,
+        },
+        {
+          path: "moviedata",
+          element: <MovieTable/>
+        },
+        {
+          path: "activitydata",
+          element: <ActivityTable />
+        },
+    
+        {
+          path: "contactdata",
+          element: <ContactTable/>
+        },
+        {
+          path: "userdata",
+          element: <UserData/>
+        }
+      ],
+
+
   },
 
-  {
-    path:"/admin",
-    element:<AdminRoot/>,
-    children:[{
-        path:"",
-        element:<Dashboard/>
-
-    },
-  {
-    path:"contacts",
-    element:<Contact/>
-  }]
-  }
+  
+   
 ];

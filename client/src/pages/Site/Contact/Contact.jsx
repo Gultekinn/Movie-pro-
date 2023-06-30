@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import Loading from '../../../component/Loading/Loading';
 import "../Contact/Contact.scss"
-import HomeIcon from '@mui/icons-material/Home';
+import axios from 'axios';
 const Contact = () => {  
   const [isActiv, setIsActiv] = useState(false);
-  const handleClick = () => {
-    setIsActiv(!isActiv);
-  };
+  const [data,setData]=useState()
+  // const handleClick = () => {
+  //   setIsActiv(!isActiv);
+  // };
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
@@ -15,6 +16,13 @@ const Contact = () => {
       setLoading(false);
     }, 1500);
   }, []);
+
+
+  useEffect(()=>{
+    axios.get('http://localhost:8080/contacts').then((res)=>{
+      setData(res.data)
+    })
+  })
   return (
   <>
    {loading ? (
@@ -25,7 +33,7 @@ const Contact = () => {
     
     
             <h1>Contact us</h1>
-<div className="button">
+{/* <div className="button">
   <div><button className={isActiv ? 'active': "" } onClick={handleClick}>Park Bulvar</button></div>
   <div><button>Metro Park</button></div>
   <div><button>Flame Towers</button></div>
@@ -35,11 +43,21 @@ const Contact = () => {
 
 
   
-</div>
+</div> */}
 <div className="commonns">
 
+  
+
   {/* parkbulvar */}
-        <div class="contact-info parkbulvar">
+  <div>     
+    
+    {
+      data&&data.map((item,index)=>{
+        return(
+    
+       <div key={index} class="contact-info parkbulvar">
+
+ 
           <div class="contact-info-item">
             <div class="contact-info-icon">
               <i class="fas fa-home"></i>
@@ -47,7 +65,7 @@ const Contact = () => {
             
             <div class="contact-info-content">
               <h4>Address</h4>
-              <p>4671 Sugar Camp Road,<br/> Owatonna, Minnesota, <br/>55060</p>
+            <p>{item.address}</p>
             </div>
           </div>
           
@@ -58,7 +76,7 @@ const Contact = () => {
             
             <div class="contact-info-content">
               <h4>Phone</h4>
-              <p>571-457-2321</p>
+              <p>{item.mainPhone}</p>
             </div>
           </div>
           
@@ -73,6 +91,12 @@ const Contact = () => {
             </div>
           </div>
         </div> 
+        )
+      })
+    }
+
+        </div>
+
 
 
 
@@ -87,7 +111,7 @@ const Contact = () => {
 
 
 {/* metropark */}
-
+{/* 
  <div class="contact-info metropark">
           <div class="contact-info-item">
             <div class="contact-info-icon">
@@ -121,11 +145,11 @@ const Contact = () => {
              <p>ntamerrwael@mfano.ga</p>
             </div>
           </div>
-        </div> 
+        </div>  */}
 
 {/* flametower */}
 
- <div class="contact-info flametower">
+ {/* <div class="contact-info flametower">
           <div class="contact-info-item">
             <div class="contact-info-icon">
               <i class="fas fa-home"></i>
@@ -158,13 +182,13 @@ const Contact = () => {
              <p>ntamerrwael@mfano.ga</p>
             </div>
           </div>
-        </div> 
+        </div>  */}
 
 
 
 
 {/* zaqulba */}
-
+{/* 
 <div class="contact-info zaqulba">
           <div class="contact-info-item">
             <div class="contact-info-icon">
@@ -198,7 +222,7 @@ const Contact = () => {
              <p>ntamerrwael@mfano.ga</p>
             </div>
           </div>
-        </div>
+        </div> */}
 
 
 

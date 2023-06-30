@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Card.scss";
+import axios from "axios";
 const Card = () => {
+  const [data,setData]=useState()
+  useEffect(()=>{
+    axios.get()
+  })
   return (
     <>
       <div className="common">

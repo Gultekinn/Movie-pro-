@@ -56,6 +56,7 @@ const navigate=useNavigate()
           id='input'
             type="password"
             className="form-control"
+            value=""
             placeholder="Enter password"
           />
         </div>
