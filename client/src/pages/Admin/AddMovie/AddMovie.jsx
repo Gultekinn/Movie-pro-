@@ -6,6 +6,8 @@ import * as Yup from "yup";
 import { message } from "antd";
 import "../AddMovie/AddMovie.scss";
 function AddMovie() {
+  const [selectedFile1, setSelectedFile1] = useState(null);
+  const [selectedFile2, setSelectedFile2] = useState(null);
   // const priceregex = /^[0-9.]+$/;
 
   // const CreateSchema = Yup.object().shape({
@@ -23,6 +25,16 @@ function AddMovie() {
   // });
   const navigate = useNavigate();
 
+  const handleImageUpload1 = (event) => {
+    const file = event.target.files[0];
+    setSelectedFile1(file);
+  };
+
+  const handleImageUpload2 = (event) => {
+    const file = event.target.files[0];
+    setSelectedFile2(file);
+  };
+
   return (
     <>
       <div id="addnewproduct">
@@ -32,8 +44,8 @@ function AddMovie() {
             initialValues={{
               filmType: "",
               mainimage: null,
-              slideimage:null,
-              video:"",
+              slideimage: null,
+              video: "",
               date: "",
               age: Number,
               time: "",
@@ -45,9 +57,9 @@ function AddMovie() {
             onSubmit={(values, { resetForm }) => {
               let newProduct = {
                 filmType: values.filmType,
-                mainimage: values.mainimage,
-                slideimage:values.slideimage,
-                video:values.video,
+                mainimage: selectedFile1,
+                slideimage: selectedFile2,
+                video: values.video,
                 date: values.date,
                 age: Number(values.age),
                 time: values.time,
@@ -59,9 +71,23 @@ function AddMovie() {
                 // isNeew: values.isNeew === "true" ? true : false,
                 // isBestSeller: values.isBestSeller === "true" ? true : false,
               }
+              const formData = new FormData();
+              formData.append("filmType", newProduct.filmType);
+              formData.append("mainimage", selectedFile1);
+              formData.append("slideimage", selectedFile2);
+              formData.append("video", newProduct.video);
+              formData.append("date", newProduct.date);
+              formData.append("age", newProduct.age);
+              formData.append("time", newProduct.time);
+              formData.append("languageType", newProduct.languageType);
+              formData.append("price", newProduct.price);
+              formData.append("title", newProduct.title);
+              console.log(selectedFile1);
+              console.log(selectedFile2);
+
               console.log(newProduct)
               axios
-                .post("http://localhost:8080/films", newProduct)
+                .post("http://localhost:8080/films", formData)
                 .then((res) => {
                   if (res.status === 200) {
                     message.open({
@@ -71,7 +97,7 @@ function AddMovie() {
                         color: "black",
                       },
                     });
-                    navigate("/admin/movie");
+                    navigate("/admin/moviedata");
                   }
                 })
                 .catch((err) => {
@@ -85,10 +111,10 @@ function AddMovie() {
                 });
             }}
           >
-            {({ errors,handleChange }) => (
+            {({ errors, handleChange }) => (
               <Form>
                 <div className="firstline">
-                <label>
+                  <label>
                     <span>
                       Film: <span style={{ color: "red" }}>*</span>
                     </span>
@@ -105,7 +131,7 @@ function AddMovie() {
                     <span>
                       Image URL: <span style={{ color: "red" }}>*</span>
                     </span>
-                    <Field name="mainimage" />
+                    <Field type="file" name="mainimage" onChange={handleImageUpload1} />
                     {/* {errors.mainimage ? (
                       <p style={{ color: "red" }}>{errors.mainimage}</p>
                     ) : null} */}
@@ -115,29 +141,24 @@ function AddMovie() {
                     <span>
                       Slideimg URL: <span style={{ color: "red" }}>*</span>
                     </span>
-                    <Field name="slideimage" placeholder="URL..." />
-                    {errors.slideimage? (
+                    <Field name="slideimage" placeholder="URL..." type="file" onChange={handleImageUpload2}/>
+                    {errors.slideimage ? (
                       <p style={{ color: "red" }}>{errors.slideimage}</p>
                     ) : null}
                   </label>
-
-                 
-
-
-                 
                 </div>
-                <div className="secondline"> 
-                <label>
+                <div className="secondline">
+                  <label>
                     <span>
                       Video URL: <span style={{ color: "red" }}>*</span>
                     </span>
                     <Field name="video" placeholder="URL..." />
-                    {errors.video? (
+                    {errors.video ? (
                       <p style={{ color: "red" }}>{errors.video}</p>
                     ) : null}
                   </label>
 
-                   <label>
+                  <label>
                     <span>
                       Date: <span style={{ color: "red" }}>*</span>
                     </span>
@@ -147,7 +168,7 @@ function AddMovie() {
                       <p style={{ color: "red" }}>{errors.date}</p>
                     ) : null}
                   </label>
-               
+
                   <label>
                     <span>
                       Age: <span style={{ color: "red" }}>*</span>
@@ -157,11 +178,11 @@ function AddMovie() {
                       <p style={{ color: "red" }}>{errors.age}</p>
                     ) : null}
                   </label>
-               
-               
+
+
                 </div>
                 <div className="thirdline">
-                   <label>
+                  <label>
                     <span>
                       Time: <span style={{ color: "red" }}>*</span>
                     </span>
@@ -169,8 +190,8 @@ function AddMovie() {
                     {errors.time ? (
                       <p style={{ color: "red" }}>{errors.time}</p>
                     ) : null}
-                  </label> 
-                   <label>
+                  </label>
+                  <label>
                     <span>
                       Language: <span style={{ color: "red" }}>*</span>
                     </span>
@@ -188,7 +209,7 @@ function AddMovie() {
                       <p style={{ color: "red" }}>{errors.languageType}</p>
                     ) : null}
                   </label>
-                   <label>
+                  <label>
                     <span>
                       Price: <span style={{ color: "red" }}>*</span>
                     </span>
@@ -207,7 +228,7 @@ function AddMovie() {
                     ) : null}
                   </label>
                 </div>
-              
+
 
                 <button className="create-product" type="submit">
                   Create

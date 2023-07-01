@@ -1,0 +1,28 @@
+.cardo{
+    margin: auto;
+    width: 600px;
+    height: 500px;
+    border: 1px solid  rgba(55, 11, 144, 0.124);
+    border-radius: 10px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(18, 157, 155, 0.467);
+    
+    
+    &__img{
+        width: 250px;
+        height: 400px;
+      
+    }
+    &__title{
+    width: 250px;
+        height: 400px;
+        padding: 50px;
+        text-align: start;   
+        h3{
+            color: red;
+        }
+    }
+}

@@ -94,3 +94,8 @@ module.exports.login = async (req, res) => {
         res.json({ errors, created: false });
     }
 };
+
+module.exports.getMe = async (req, res) => {
+    const user = req.user;
+    res.send(user)
+}

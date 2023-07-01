@@ -105,7 +105,6 @@ const handleUpdate = (id) => {
                     <button onClick={()=>handleUpdate(item._id)}>
                       <FaUserEdit  />
                     </button>
-
                     <button onClick={() => handleDetail(item._id)}>
                       <BiMessageSquareDetail />
                     </button>

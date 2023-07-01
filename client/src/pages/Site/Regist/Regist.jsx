@@ -46,7 +46,6 @@ const Regist = () => {
                   axios.post("http://localhost:8080/auth", values).then(res => {
                     toast.success("Succesfully Registered!")
                   })
-                  console.log(values);
                   navigate('/login')
                   resetForm()
                 }}
