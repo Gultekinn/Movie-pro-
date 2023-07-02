@@ -12,6 +12,7 @@ const Film = mongoose.model(
       time: String,
       languageType: Array,
       price: Number,
+      title:String
 
     },
     {

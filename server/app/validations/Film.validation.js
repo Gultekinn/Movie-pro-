@@ -8,6 +8,7 @@ const filmValidation = [
     body('time').notEmpty().withMessage('Time is required !'),
     body('price').notEmpty().withMessage('Price is required !'),
     body('type').notEmpty().withMessage('Type is required !'),
+    body('title').notEmpty().withMessage('Title is required !'),
 
     (req, res, next) => {
         const errors = validationResult(req)

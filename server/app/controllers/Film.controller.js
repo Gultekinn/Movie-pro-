@@ -13,16 +13,15 @@ const filmController = {
     res.send(target);
   },
   add: async (req, res) => {
-    const mainImageFile = req.files['mainimage'];
-    const slideImageFile = req.files['slideimage'];
+    const mainImageFile = req.files["mainimage"];
+    const slideImageFile = req.files["slideimage"];
 
     if (!mainImageFile || !slideImageFile) {
-      return res.status(400).json({ error: 'No image files uploaded' });
+      return res.status(400).json({ error: "No image files uploaded" });
     }
 
     const mainImage = mainImageFile[0].filename;
     const slideImage = slideImageFile[0].filename;
-
 
     let newFilm = new Film({
       filmType: req.body.filmType.split(","),
@@ -34,6 +33,7 @@ const filmController = {
       time: req.body.time,
       languageType: req.body.languageType.split(","),
       price: req.body.price,
+      title: req.body.title,
     });
     await newFilm.save();
     res.send(newFilm);
@@ -41,14 +41,14 @@ const filmController = {
   edit: async (req, res) => {
     const { id } = req.params;
     const { filmType, video, date, age, time, languageType, price } = req.body;
-    const mainImageFile = req.files['mainimage'];
-    const slideImageFile = req.files['slideimage'];
+    const mainImageFile = req.files["mainimage"];
+    const slideImageFile = req.files["slideimage"];
 
     try {
       const film = await Film.findById(id);
 
       if (!film) {
-        return res.status(404).json({ error: 'Film not found' });
+        return res.status(404).json({ error: "Film not found" });
       }
 
       // Update the film properties
@@ -59,7 +59,7 @@ const filmController = {
       film.time = time;
       film.languageType = languageType;
       film.price = price;
-
+      film.title = title;
       // Update the mainImage if uploaded
       if (mainImageFile) {
         film.mainimage = mainImageFile[0].filename;
@@ -73,10 +73,10 @@ const filmController = {
       // Save the updated film
       await film.save();
 
-      res.status(200).json({ message: 'Film updated successfully' });
+      res.status(200).json({ message: "Film updated successfully" });
     } catch (err) {
       console.error(err);
-      res.status(500).json({ error: 'Failed to update film' });
+      res.status(500).json({ error: "Failed to update film" });
     }
   },
   delete: async (req, res) => {

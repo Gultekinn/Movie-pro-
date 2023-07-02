@@ -5,7 +5,14 @@ const mongoose = require("mongoose")
 const filmRoute = require('./app/routes/Film.route')
 const cinemaRoute = require('./app/routes/Cinema.route')
 const contactRoute=require('./app/routes/Contact.route')
-const userRoute = require('./app/routes/User.route')
+const userRoute = require('./app/routes/AuthRoutes')
+app.use('/api/users', userRoute)
+const cookieParser = require("cookie-parser");
+app.use(cookieParser());
+
+app.use(express.json({ limit: "20mb" }));
+app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+mongoose.set("strictQuery", true);
 
 const path = require('path')
 const uploadPath=path.join(__dirname,'public')

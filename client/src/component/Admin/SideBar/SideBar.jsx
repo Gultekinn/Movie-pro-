@@ -4,10 +4,11 @@ import { RxHamburgerMenu } from 'react-icons/rx'
 import { GrClose } from 'react-icons/gr'
 import { Link } from 'react-router-dom'
 import { AiFillDashboard } from 'react-icons/ai'
-import { BsCardChecklist } from 'react-icons/bs'
+import { BiSolidMoviePlay } from 'react-icons/bi'
 import { TbActivityHeartbeat } from 'react-icons/tb'
 import { FaMicroblog} from 'react-icons/fa'
 import { RiAdminFill } from 'react-icons/ri'
+import Content from '../../../layout/Admin/Content/Content';
 
 const SideBar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -18,7 +19,7 @@ const SideBar = () => {
     <div className={`main ${isSidebarOpen ? '' : 'close'}`} id="main">
       <div className="sidebar">
         <div className="sidebar__top">
-          <div>
+          <div className='tgl'>
             {isSidebarOpen ? (
               <GrClose
                 className="toggle-btn"
@@ -32,7 +33,7 @@ const SideBar = () => {
             )}
           </div>
           <div className="logo-div">
-            <img src="https://themes.waituk.com/entrada-default/wp-content/uploads/sites/3/2016/04/logo-1-1-2-2.png" alt="logo" className='admin-logo' />
+            <img src="https://webstrot.com/html/moviepro/html/images/header/logo.png" alt="logo" className='admin-logo' />
           </div>
         </div>
 
@@ -40,19 +41,19 @@ const SideBar = () => {
           <div className={`admin-items ${isSidebarOpen ? '' : 'icon-only'}`}>
             <ul>
               <li>
-                <AiFillDashboard />
+                <AiFillDashboard/>
                 {isSidebarOpen && <Link to="">Dashboard</Link>}
               </li>
               <li>
-                <BsCardChecklist />
+                <BiSolidMoviePlay/>
                 {isSidebarOpen && <Link to="moviedata">Movie</Link>}
               </li>
               <li>
-                <TbActivityHeartbeat />
+                <TbActivityHeartbeat/>
                 {isSidebarOpen && <Link to="activitydata">Activity</Link>}
               </li>
               <li>
-                <FaMicroblog />
+                <FaMicroblog/>
                 {isSidebarOpen && <Link to="contactdata">Contact</Link>}
               </li>
              
@@ -75,6 +76,7 @@ const SideBar = () => {
             />
           )}
         </header>
+        <Content />
       </div>
     </div>
   )

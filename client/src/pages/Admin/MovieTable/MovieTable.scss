@@ -1,0 +1,29 @@
+.table-datas {
+    padding: 50px 70px;
+}
+button{
+    background-color: transparent;
+    color: red;
+    border: none;
+    font-size: 20px;
+    margin-left: 10px;
+}
+button:hover{
+    color: rgb(44, 44, 208);
+}
+.divv{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    input{
+        background-color: transparent;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        padding: 10 px 0;
+    }
+}
+
+
+input {
+    color: white;
+}

@@ -1,3 +1,8 @@
+body{
+    padding: 0;
+
+}
+
 .main {
     width: 100%;
     display: flex;
@@ -6,8 +11,8 @@
 .sidebar {
     height: 100vh;
     width: 300px;
-    background: rgb(37, 37, 37);
-    background: linear-gradient(90deg, rgba(37, 37, 37, 1) 0%, rgba(105, 105, 88, 1) 25%, rgba(71, 77, 72, 1) 92%);
+    background: rgb(68, 132, 201);
+    background: linear-gradient(90deg, rgb(98, 88, 235) 0%, rgbargb(88, 88, 105), rgb(17, 37, 83) 92%);
     transition: all 0.5s ease-in-out;
     
 
@@ -77,8 +82,8 @@
 }
 
 header {
-    background: rgb(37, 37, 37);
-    background: linear-gradient(90deg, rgba(37, 37, 37, 1) 0%, rgba(105, 105, 88, 1) 25%, rgba(71, 77, 72, 1) 92%);
+    background: rgb(23, 64, 162);
+    background: linear-gradient(90deg, rgb(59, 106, 199) 0%, rgb(109, 118, 201) 25%, rgb(21, 35, 106));
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -109,6 +114,13 @@ header .toggle-btn {
     .container .admin-items ul li:hover {
         background-color: transparent;
     }
+
+    .container{
+        display: none;
+        width: 100%;
+    }
+
+
 }
 
 .main.close .content {
@@ -164,4 +176,12 @@ header .toggle-btn {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.tgl {
+    text-align: start;
+}
+
+.content {
+    margin: 0 auto;
 }
