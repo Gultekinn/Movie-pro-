@@ -8,7 +8,6 @@ import Rule from "../pages/Site/Rule/Rule";
 import Home from "../pages/Site/Home/Home";
 import Login from "../pages/Site/Login/Login";
 import Regist from "../pages/Site/Regist/Regist";
-import Dashboard from "../pages/Admin/Dashboard/Dashboard";
 import MovieTable from "../pages/Admin/MovieTable/MovieTable";
 import ActivityTable from "../pages/Admin/ActivityTable/ActivityTable";
 import ContactTable from "../pages/Admin/ContactTable/ContactTable";
@@ -24,6 +23,7 @@ import AddActivity from "../pages/Admin/AddActivity/AddActivity";
 import Updatecontact from "../pages/Admin/Updatecontact/Updatecontact";
 import Detailcontact from "../pages/Admin/Detailcontact/Detailcontact";
 import AddContact from "../pages/Admin/AddContact/AddContact";
+import Dashboard from "../pages/Admin/DashBoard/DashBoard";
 
 export const ROUTES = [
   {
@@ -76,7 +76,7 @@ export const ROUTES = [
     children: [
       {
         path: "",
-        element: <Dashboard />,
+        element: <Dashboard/>,
       },
       {
         path: "",

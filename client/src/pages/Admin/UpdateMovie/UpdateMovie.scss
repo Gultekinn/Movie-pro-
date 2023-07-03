@@ -1,20 +1,21 @@
-#formikk{
-    display: none;
+#updateproduct{
+    width: 100%;
+    padding: 5%;
+    font-family: "Poppins";
+    height: 100%;
 }
-#addnewproduct{
-    padding: 50px 70px;
-}
-#addnewproduct .addnewproduct-form{
+
+#updateproduct .addnewproduct-form{
+   
     font-family: "Poppins";
     padding: 4%;
-
-
     color: white;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-#addnewproduct .addnewproduct-form form{
+#updateproduct .addnewproduct-form form{
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -23,15 +24,15 @@
     gap: 30px;
 }
 
-#addnewproduct .addnewproduct-form form .firstline{
+#updateproduct .addnewproduct-form form .firstline{
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-   
+
 }
 
-#addnewproduct .addnewproduct-form form input{
+#updateproduct .addnewproduct-form form input{
     background-color: rgba(69, 69, 69, 0.495);
     outline: none;
     border: 1px solid transparent;
@@ -42,41 +43,39 @@
     width: 100%;
 }
 
-#addnewproduct .addnewproduct-form form .firstline label{
+#updateproduct .addnewproduct-form form .firstline label{
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
 }
 
-#addnewproduct .addnewproduct-form form .secondline{
+#updateproduct .addnewproduct-form form .secondline{
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-   
 }
 
-#addnewproduct .addnewproduct-form form .secondline label{
+#updateproduct .addnewproduct-form form .secondline label{
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
 }
 
-#addnewproduct .addnewproduct-form form .thirdline{
+#updateproduct .addnewproduct-form form .thirdline{
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    
 }
 
-#addnewproduct .addnewproduct-form form .thirdline label{
+#updateproduct .addnewproduct-form form .thirdline label{
     width: 204px;
 }
 
-#addnewproduct .addnewproduct-form form .thirdline select{
+#updateproduct .addnewproduct-form form .thirdline select{
     background-color: rgba(69, 69, 69, 0.495);
     outline: none;
     border: 1px solid transparent;
@@ -87,7 +86,7 @@
     width: 100%;
 }
 
-#addnewproduct .addnewproduct-form form .create-product{
+#updateproduct .addnewproduct-form form .create-product{
     background-color: rgba(69, 69, 69, 0.495);
     font-family: "Poppins";
     padding: 10px 20px;
@@ -96,17 +95,19 @@
     border-radius: 5px;
     cursor: pointer;
 }
-#addnewproduct .addnewproduct-form form .create-product:hover{
-    background-color: red;
-    color: white;
-}
 
-#addnewproduct .addnewproduct-form form .lastline .select-radio{
+#updateproduct .addnewproduct-form form .lastline{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+#updateproduct .addnewproduct-form form .lastline .select-radio{
     display: flex;
     flex-direction: column;
 }
 
-#addnewproduct .addnewproduct-form form .lastline .select-radio .select-label{
+#updateproduct .addnewproduct-form form .lastline .select-radio .select-label{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,19 +115,10 @@
 }
 
 
-#addnewproduct .addnewproduct-form form .lastline .select-radio .select-label label{
+#updateproduct .addnewproduct-form form .lastline .select-radio .select-label label{
     display: flex;
 }
-label{
-    width: 400px;
-}
-#label{
-     background-color: rgba(69, 69, 69, 0.495);
-    outline: none;
-    border: 1px solid transparent;
-    color: white;
-    font-family: "Poppins";
-    padding: 10px 0px;
-    border-radius:5px ;
-    width: 100%; 
+#inp{
+    background-color: rgba(69, 69, 69, 0.495);
+
 }

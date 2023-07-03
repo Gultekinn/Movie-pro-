@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "../Login/Login.scss";
 import { Link, useNavigate } from "react-router-dom";
 import Loading from "../../../component/Loading/Loading";
 import { Formik } from 'formik'
 import * as Yup from 'yup'
 import axios from 'axios'
 import { Toaster, toast } from 'react-hot-toast'
-
+import "../Login/Login.scss"
 const Login = () => {
   const navigate = useNavigate()
 
@@ -62,20 +61,21 @@ const Login = () => {
           >
             {
               ({ values, handleSubmit, handleChange, handleBlur, dirty, touched, errors }) => (
-                <form onSubmit={handleSubmit}>
+                <form className="formm" onSubmit={handleSubmit}>
+                            <h1>Sign in</h1>
 
-                  <input type="email" placeholder='Email' id='email' value={values.email} onChange={handleChange} onBlur={handleBlur} />
+                  <input className="input" type="email" placeholder='Email' id='email' value={values.email} onChange={handleChange} onBlur={handleBlur} />
                   {touched.email && errors.email && (
                     <div className="error-message">{errors.email}</div>
                   )}
 
-                  <input type="password" placeholder='Password' id='password' value={values.password} onChange={handleChange} onBlur={handleBlur} />
+                  <input className="input" type="password" placeholder='Password' id='password' value={values.password} onChange={handleChange} onBlur={handleBlur} />
                   {touched.password && errors.password && (
                     <div className="error-message">{errors.password}</div>
                   )}
-                  <button type='submit' disabled={!dirty}>Submit</button>
+                  <button className="btnnn" type='submit' disabled={!dirty}>Submit</button>
                   <p className="forgot-password text-right">
-                    Don't have an account? <Link onClick={() => navigate('/regist')}>Register</Link>
+                    Don't have an account? <Link id="ln" onClick={() => navigate('/regist')}>Register</Link>
                   </p>
                 </form>
               )

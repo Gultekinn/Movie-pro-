@@ -7,7 +7,7 @@ const DetailMovie = () => {
 
   const [item,setData]=useState({})
  useEffect(()=>{
-  axios.get(`http://localhost:8080/films${id}`).then((res)=>{
+  axios.get(`http://localhost:8080/films/${id}`).then((res)=>{
     setData(res.data)
     console.log(res.data)
   })

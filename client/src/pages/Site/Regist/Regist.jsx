@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "../Regist/Regist.scss";
 import { Link, useNavigate } from "react-router-dom";
 import Loading from "../../../component/Loading/Loading";
 import { Formik } from 'formik'
 import * as Yup from 'yup'
 import axios from 'axios'
 import { Toaster, toast } from 'react-hot-toast'
+import "../Regist/Regist.scss"
 const Regist = () => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -23,7 +23,8 @@ const Regist = () => {
         <Loading />
       ) : (
         <div className="register">
-          
+                         
+
           <Formik initialValues={{
                 username: "",
                 email: "",
@@ -52,21 +53,23 @@ const Regist = () => {
               >
                 {
                   ({ values, handleSubmit, handleChange, handleBlur , dirty, touched, errors }) => (
-                    <form id="form" onSubmit={handleSubmit}>
-                    
-                      <input type="text" placeholder='Username' id='username' value={values.username} onChange={handleChange} onBlur={handleBlur}/>
+            
 
-                      <input type="email" placeholder='Email' id='email' value={values.email} onChange={handleChange} onBlur={handleBlur}/>
+                    <form id="form" onSubmit={handleSubmit}>
+                            <h1>Sign up</h1>
+                      <input className="inptt" type="text" placeholder='Username' id='username' value={values.username} onChange={handleChange} onBlur={handleBlur}/>
+
+                      <input  className="inptt" type="email" placeholder='Email' id='email' value={values.email} onChange={handleChange} onBlur={handleBlur}/>
                       {touched.email && errors.email && (
                         <div className='error-message'>{errors.email}</div>
                       )}
 
-                      <input type="password" placeholder='Password' id='password' value={values.password} onChange={handleChange} onBlur={handleBlur}/>
+                      <input  className="inptt" type="password" placeholder='Password' id='password' value={values.password} onChange={handleChange} onBlur={handleBlur}/>
                       {touched.password && errors.password && (
                         <div className='error-message'>{errors.password}</div>
                       )}
 
-                      <button type='submit' disabled={!dirty}>Submit</button>
+                      <button id="btnnn" type='submit' disabled={!dirty}>Submit</button>
                     </form>
                   )
                 }

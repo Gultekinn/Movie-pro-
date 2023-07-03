@@ -21,7 +21,7 @@ const Home = () => {
         <Loading />
       ) : (
         <div>
-          
+          <div className="sllider">
             <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
 
  
@@ -51,10 +51,9 @@ const Home = () => {
     <span className="visually-hidden">Next</span>
   </button>
 
-</div>
+</div></div>
           
 
-          <SimpleSlider />
 
           <Hero1 />
           <Slide />

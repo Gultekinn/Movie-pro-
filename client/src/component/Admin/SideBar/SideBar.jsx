@@ -28,7 +28,7 @@ const SideBar = () => {
               />
             ) : (
               <div className="adminimg">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8a9YSaMNgslH8Rx0SlZ1YZveaTZKQT5qzFay2CmaeFQ&s" alt="img" className='admin-logo-img' />
+                <img id='imggg' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc0kWRydMXI3JWHMeswFXb1UBzyUOGd7j9lw&usqp=CAU" alt="img" className='admin-logo-img' />
               </div>
             )}
           </div>
