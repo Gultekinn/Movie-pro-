@@ -20,7 +20,10 @@ import DetailMovie from "../pages/Admin/DetailMovie/DetailMovie";
 import UpdateMovie from "../pages/Admin/UpdateMovie/UpdateMovie";
 import Detailactivity from "../pages/Admin/Detailactivity/Detailactivity";
 import Updateactivity from "../pages/Admin/Updateactivity/Updateactivity";
-import AddActivity from "../pages/AddActivity/AddActivity";
+import AddActivity from "../pages/Admin/AddActivity/AddActivity";
+import Updatecontact from "../pages/Admin/Updatecontact/Updatecontact";
+import Detailcontact from "../pages/Admin/Detailcontact/Detailcontact";
+import AddContact from "../pages/Admin/AddContact/AddContact";
 
 export const ROUTES = [
   {
@@ -119,6 +122,18 @@ export const ROUTES = [
           {
             path:"addactivity",
             element:<AddActivity/>
+          },
+          {
+            path:"updatecontact/:id",
+            element:<Updatecontact/>
+          },
+          {
+            path:"contact/:id",
+            element:<Detailcontact/>
+          },
+          {
+            path:"addcontact",
+            element:<AddContact/>
           }
         ],
       },

@@ -8,7 +8,9 @@ const Slide = () => {
   <h1>Movie genres</h1>
  </div>
     
-    <div class="container"> <div class="carousel">
+    <div class="containerr"> 
+    
+    <div class="carousell">
 
 <div class="image">
   <div className="image1">

@@ -1,79 +1,84 @@
-import React, { useEffect, useState } from 'react'
-import '../Regist/Regist.scss'
+import React, { useEffect, useState } from "react";
+import "../Regist/Regist.scss";
 import { Link, useNavigate } from "react-router-dom";
-import Loading from '../../../component/Loading/Loading';
-import "../Regist/Regist.scss"
-
+import Loading from "../../../component/Loading/Loading";
+import { Formik } from 'formik'
+import * as Yup from 'yup'
+import axios from 'axios'
+import { Toaster, toast } from 'react-hot-toast'
 const Regist = () => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
+
     window.scrollTo({ top: 0 });
     setTimeout(() => {
       setLoading(false);
     }, 1500);
   }, []);
-const navigate=useNavigate()
+  const navigate = useNavigate();
   return (
     <>
       {loading ? (
-        <Loading/>
+        <Loading />
       ) : (
-    <div className="register">
-         <form id='form'>
-        <h3>Sign Up</h3>
+        <div className="register">
+          
+          <Formik initialValues={{
+                username: "",
+                email: "",
+                password: ""
+              }}
+                //validation schema
+                validationSchema={Yup.object({
+                  username: Yup.string().required("Username is required!"),
+                  email: Yup.string()
+                    .email('Invalid email format')
+                    .required('Email is required'),
+                  password: Yup.string()
+                    .required('Password is required')
+                    .min(8, 'Password must be at least 8 characters long')
+                    .max(20, 'Password must not exceed 20 characters')
+                })}
 
-        <div className="mb-3">
-          <label>First name</label>
-          <input
-          id='input'
-            type="text"
-            className="form-control"
-            placeholder="First name"
-            value=""
-          />
-        </div>
+                onSubmit={(values, { resetForm }) => {
+                  console.log(values);
+                  axios.post("http://localhost:8080/auth", values).then(res => {
+                    toast.success("Succesfully Registered!")
+                  })
+                  console.log(values);
+                  navigate('/login')
+                  resetForm()
+                }}
+              >
+                {
+                  ({ values, handleSubmit, handleChange, handleBlur , dirty, touched, errors }) => (
+                    <form id="form" onSubmit={handleSubmit}>
+                    
+                      <input type="text" placeholder='Username' id='username' value={values.username} onChange={handleChange} onBlur={handleBlur}/>
 
-        <div className="mb-3">
-          <label>Last name</label>
-          <input id='input' type="text" className="form-control" placeholder="Last name"  value=""/>
-        </div>
+                      <input type="email" placeholder='Email' id='email' value={values.email} onChange={handleChange} onBlur={handleBlur}/>
+                      {touched.email && errors.email && (
+                        <div className='error-message'>{errors.email}</div>
+                      )}
 
-        <div className="mb-3">
-          <label>Email address</label>
-          <input
-          id='input'
-            type="email"
-            className="form-control"
-            placeholder="Enter email"
-            value=''
-          />
-        </div>
+                      <input type="password" placeholder='Password' id='password' value={values.password} onChange={handleChange} onBlur={handleBlur}/>
+                      {touched.password && errors.password && (
+                        <div className='error-message'>{errors.password}</div>
+                      )}
 
-        <div className="mb-3">
-          <label>Password</label>
-          <input
-          id='input'
-            type="password"
-            className="form-control"
-            value=""
-            placeholder="Enter password"
-          />
-        </div>
+                      <button type='submit' disabled={!dirty}>Submit</button>
+                    </form>
+                  )
+                }
+              </Formik>
 
-        <div className="d-grid">
-          <button type="submit" className="btn btn-primary">
-            Sign Up
-          </button>
         </div>
-        <p className="forgot-password text-right">
-          Already registered <Link id='ln' onClick={()=>navigate('/login')}>sign in?</Link>
-        </p>
-      </form>
-      </div>
       )}
-    </>
-  )
-}
+            <Toaster />
 
-export default Regist
+    </>
+  );
+};
+
+export default Regist;

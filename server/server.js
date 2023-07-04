@@ -28,6 +28,8 @@ mongoose.connect("mongodb+srv://gultekin:gultekinn@cluster0.ez8varc.mongodb.net"
 app.use('/films',filmRoute)
 app.use('/cinemas',cinemaRoute)
 app.use('/contacts',contactRoute)
+app.use('/auth', userRoute)
+
 app.listen(8080, () => {
     console.log("server running")
 })

@@ -13,7 +13,7 @@ const SimpleSlider = () => {
     slidesToScroll: 2,
   };
   return (
-    <div className="slide">
+    <div id="slde" className="slide">
     
           <h1>MOVIE PRO SPECIAL</h1>
           <Slider {...settings}>
@@ -28,10 +28,8 @@ const SimpleSlider = () => {
              <h2> Avengers</h2>
              <div className="div__icon">
               <div> <p>  Drama action</p></div>
-            <div id="shop"><ShoppingCartIcon/></div>
 
              </div>
-            <p id="star"><StarIcon/><StarIcon/><StarIcon/><StarBorderIcon/><StarBorderIcon/></p>
 
 
             </div>
@@ -48,10 +46,8 @@ const SimpleSlider = () => {
               <h2> Barbie</h2>
              <div className="div__icon">
               <div> <p>Comedy</p></div>
-            <div id="shop"><ShoppingCartIcon/></div>
 
              </div>
-            <p id="star"><StarIcon/><StarIcon/><StarIcon/><StarIcon/><StarBorderIcon/></p>
             </div>
 
             <div className="text">
@@ -65,10 +61,8 @@ const SimpleSlider = () => {
               <h2>Secret Invasion</h2>
              <div className="div__icon">
               <div> <p>Action</p></div>
-            <div id="shop"><ShoppingCartIcon/></div>
 
              </div>
-            <p id="star"><StarIcon/><StarIcon/><StarIcon/><StarIcon/><StarBorderIcon/></p>
             </div>
 
             <div className="text">
@@ -82,10 +76,8 @@ const SimpleSlider = () => {
               <h2> Spider-Man</h2>
              <div className="div__icon">
               <div> <p> Action</p></div>
-            <div id="shop"><ShoppingCartIcon/></div>
 
              </div>
-            <p id="star"><StarIcon/><StarIcon/><StarIcon/><StarBorderIcon/><StarBorderIcon/></p>
             </div>
 
             <div className="text">
@@ -99,10 +91,8 @@ const SimpleSlider = () => {
               <h2>Joker</h2>
              <div className="div__icon">
               <div> <p>  Drama action</p></div>
-            <div id="shop"><ShoppingCartIcon/></div>
 
              </div>
-            <p id="star"><StarIcon/><StarIcon/><StarIcon/><StarIcon/><StarIcon/></p>
             </div>
 
             <div className="text">
@@ -116,10 +106,8 @@ const SimpleSlider = () => {
               <h2>Atatürk</h2>
              <div className="div__icon">
               <div> <p>Drama action</p></div>
-            <div id="shop"><ShoppingCartIcon/></div>
 
              </div>
-            <p id="star"><StarIcon/><StarIcon/><StarIcon/><StarIcon/><StarIcon/></p>
             </div>
           </Slider>
         </div>

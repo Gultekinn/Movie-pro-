@@ -8,18 +8,6 @@ const Hero1 = () => {
 <hr id="hr" />
       <div className="Hero">
      
-        <div className="Hero__button">
-          
-          <div>
-            <button id="btn">Today</button>
-          </div>
-          <div>
-            <button id="btn">Soon</button>
-          </div>
-          <div>
-            <button id="btn">Table</button>
-          </div>
-        </div>
         </div>
 <div className="section">
     <div className="section__button">

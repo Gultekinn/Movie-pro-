@@ -3,6 +3,7 @@ const { body, validationResult } = require('express-validator')
 const contactValidation = [
     body('mainPhone').notEmpty().withMessage('Phone title is required'),
     body('address').notEmpty().withMessage('address title is required'),
+    body('email').notEmpty().withMessage('email title is required'),
 
     (req, res, next) => {
         const errors = validationResult(req)

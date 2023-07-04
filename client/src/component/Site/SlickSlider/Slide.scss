@@ -1,12 +1,7 @@
-*{
-padding: 0;
-margin: 0;
-box-sizing: border-box;
-}
 
-.slide {
-  padding: 30px 30px;
 
+#slde {
+padding: 30px 30px;
   height: 700px;
 
 
@@ -22,6 +17,7 @@ box-sizing: border-box;
     color: white;
     text-align: center;
     position: relative;
+    transition: 5s;
     cursor: pointer;
     #shop {
       cursor: pointer;
@@ -50,11 +46,11 @@ box-sizing: border-box;
     }
 
     .texts{
-      font-size: 1.2rem;
+      font-size: 10px;
       position: absolute;
       top: 0;
       left: 0;
-      background-color: crimson;
+      background-color: rgba(118, 41, 225, 0.545);
 width: 90%;
 height:400px ;
 display: flex;
@@ -67,7 +63,7 @@ visibility: hidden;
 button{
   width: 200px;
   height: 50px;
-  background: blue;
+  background: rgb(44, 0, 164);
   border: none;
   border-radius: 10px;
   color: white;

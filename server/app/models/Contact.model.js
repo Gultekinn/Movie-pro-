@@ -5,7 +5,8 @@ const Contact = mongoose.model(
   {
     image:String,
     mainPhone:String,
-    address:String
+    address:String,
+    email:String
   },
   {
     timestamps:true,
