@@ -6,16 +6,16 @@
     gap: 40px;
     &__card{
         padding: 20px;
-        width: 300px;
+        width: 320px;
        display: flex;
        flex-direction: column;
        justify-content: center;
-        background-color: rgba(112, 115, 114, 0.396);
+        background-color: #0095c726;
         border-radius: 10px;
         h3{
             font-size: 21px;
             margin-top: 10px;
-            color: rgb(84, 7, 167);
+            color: #ffc300;
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
         &__img{
             img{

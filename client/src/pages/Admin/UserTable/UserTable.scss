@@ -1,3 +1,10 @@
+
+.table-datas{
+    padding: 50px 70px;
+}
+.table-dark{
+    margin-top: 20px;
+}
 button .act-icon-delete {
     font-size: 30px;
     color: red;
@@ -5,12 +12,12 @@ button .act-icon-delete {
 
 button .act-icon-edit {
     font-size: 29px;
-    color: orange;
+    color: red;
 }
 
 button .act-icon-detail {
     font-size: 30px;
-    color: aliceblue;
+    color: red;
 }
 
 tr td {
@@ -20,3 +27,22 @@ tr td {
 tr th {
     font-size: 19px;
 }
+#buuton{
+    color: red;
+   border: none;
+   font-size: 20px;
+   margin-left: 10px;
+   background-color: transparent;
+}
+#innpt {
+    width: 230px;
+    height: 40px;
+    padding: 12px;
+    font-weight: 600;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 1px solid;   
+     color: white;
+
+  }
+  

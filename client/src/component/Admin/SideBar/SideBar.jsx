@@ -5,7 +5,7 @@ import { GrClose } from 'react-icons/gr'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { FaUser } from 'react-icons/fa'
-
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { AiFillDashboard } from 'react-icons/ai'
 import { BiSolidMoviePlay } from 'react-icons/bi'
 import { TbActivityHeartbeat } from 'react-icons/tb'
@@ -96,9 +96,7 @@ const SideBar = () => {
               onClick={toggleSidebar}
             />
           )}
-            <div className="admin-img">
-            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="admin__img" />
-          </div>
+            
         </header> 
         <Content />
       </div>

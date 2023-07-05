@@ -17,7 +17,8 @@ mongoose.set("strictQuery", true);
 const path = require('path')
 const uploadPath=path.join(__dirname,'public')
 app.use('/public',express.static(uploadPath))
-
+app.use(cors({credentials:true,origin:'http://localhost:3000'}))
+app.use(express.json())
 mongoose.connect("mongodb+srv://gultekin:gultekinn@cluster0.ez8varc.mongodb.net").then(()=>{
     console.log("connected")
 })

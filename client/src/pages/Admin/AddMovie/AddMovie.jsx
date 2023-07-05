@@ -183,14 +183,11 @@ function AddMovie() {
                       Language: <span style={{ color: "red" }}>*</span>
                     </span>
                     <Field name="languageType" as="select">
-                      <option value="English">En</option>
+                      <option value="EN">EN</option>
                       <option
-                        value="Turkey
-"
-                      >
-                        Tr
-                      </option>
-                      <option value="Russia">Ru</option>
+                        value="TR">TR
+                   </option>
+                      <option value="RU">RU</option>
                     </Field>
                     {errors.languageType ? (
                       <p style={{ color: "red" }}>{errors.languageType}</p>

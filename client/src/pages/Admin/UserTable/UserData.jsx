@@ -12,20 +12,31 @@ function UserData() {
   const [search, setSearch] = useState("");
   const [deleted,setdeleted]=useState(false)
   useEffect(() => {
-    axios.get("http://localhost:3000/auth/users").then(res => {
+    axios.get("http://localhost:8080/auth/users").then(res => {
       setData(res.data)
       console.log(res.data);
     })
   }, [deleted])
 
 
-  //delete
-  const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:3000/auth/users${id}`).then(res => {
-      console.log(`${id}'s user has been deleted`);
-    })
-    setdeleted(true)
+  // //delete
+  // const handleDelete = async (id) => {
+  //   await axios.delete(`http://localhost:8080/auth/users${id}`).then(res => {
+  //     console.log(`${id}'s user has been deleted`);
+  //   })
+  //   setdeleted(true)
+  // }
+// delete
+const handleDelete = async (id) => {
+  try {
+    await axios.delete(`http://localhost:8080/auth/users/${id}`);
+    console.log(`${id} numaralı kullanıcı silindi`);
+    const updatedData = data.filter(item => item._id !== id);
+    setData(updatedData);
+  } catch (error) {
+    console.error(`Kullanıcı silinirken bir hata oluştu: ${error}`);
   }
+};
 
   //detail
   const handleDetail = (id) => {
@@ -39,15 +50,17 @@ function UserData() {
     <>
       <div className="table-datas">
         <div className="table__btn">
-          <input onKeyUp={(e) => setSearch(e.target.value)} className='searchinp' type="text" placeholder='Search...' />
+          <input id="innpt"
+ onKeyUp={(e) => setSearch(e.target.value)} className='searchinp' type="text" placeholder='Search...' />
         </div>
         <table class="table table-striped table-dark">
-          <thead>
+          <thead>              
+
             <tr>
               <th className="col-3" scope="col">Username</th>
               <th className="col-3" scope="col">Email</th>
               <th className="col-3" scope="col">isAdmin</th>
-              <th className="col-3" scope="col">Actions</th>
+              <th className="col-3" scope="col">Operation</th>
             </tr>
           </thead>
           <tbody>
@@ -58,10 +71,10 @@ function UserData() {
                   <td>{item.email}</td>
                   <td>{item.isAdmin ? "True" : "False"}</td>
                   <td>
-                    <button onClick={() => handleDelete(item._id)}>
+                    <button  id="buuton" onClick={() => handleDelete(item._id)}>
                       <TiDeleteOutline className='act-icon-delete'/>
                     </button>
-                    <button onClick={() => handleDetail(item._id)}>
+                    <button  id="buuton" onClick={() => handleDetail(item._id)}>
                       <BiMessageSquareDetail className='act-icon-detail'/>
                     </button>
                   </td>

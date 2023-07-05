@@ -20,4 +20,4 @@ module.exports.checkUser = async (req, res, next) => {
         console.log("Error:", error);
         res.status(500).json({ error: 'Internal server error' });
     }
-};  
+};

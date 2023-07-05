@@ -193,16 +193,16 @@ display: inherit;
     position: relative;
      list-style: none;
     text-align: start;
-color: white;
+color: rgb(6, 6, 6);
   ul {
     list-style: none;
     text-align: start;
-    color: white;
+    color: rgb(0, 0, 0);
   }
   #link{
     list-style: none;
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 21px;
     font-family: 'Courier New', Courier, monospace;
     text-align: start;
@@ -210,11 +210,14 @@ color: white;
   #links{
     list-style: none;
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 21px;
     font-family: 'Courier New', Courier, monospace;
     text-align: start;
 
+  }
+  #linkss{
+    color: black;
   }
   }
   li:hover{

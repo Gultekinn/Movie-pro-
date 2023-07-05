@@ -1,0 +1,39 @@
+.user {
+    padding: 60px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 16px;
+    background: rgb(37, 37, 37);
+    background: linear-gradient(45deg, rgb(136, 162, 210) 0%, rgba(130, 165, 229, 0.557) 25%, rgba(89, 105, 227, 0.399) 92%);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    h4{
+        margin: 20px 0 10px;
+    }
+}
+
+.user__wrapper {
+    width: 100%;
+    height: 100%;
+    padding-top: 150px;
+}
+
+.user-data {
+    padding-top: 30px;
+
+    strong {
+        font-size: 26px;
+    }
+
+    span {
+        font-size: 24px;
+        font-weight: 400;
+    }
+}

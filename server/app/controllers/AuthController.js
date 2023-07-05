@@ -81,6 +81,11 @@ module.exports.login = async (req, res) => {
         if (!passwordMatch) {
             throw Error("Incorrect password");
         }
+
+        // Update the lastLoggedIn field
+        user.lastLoggedIn = new Date();
+        // await user.save();
+
         const token = createToken(user._id);
 
         res.cookie("jwt", token, {
@@ -99,6 +104,7 @@ module.exports.getMe = async (req, res) => {
     const user = req.user;
     res.send(user)
 }
+
 
 module.exports.getAllUsers = async (req, res) => {
     try {
