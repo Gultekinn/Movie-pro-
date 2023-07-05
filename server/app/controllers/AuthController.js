@@ -99,3 +99,53 @@ module.exports.getMe = async (req, res) => {
     const user = req.user;
     res.send(user)
 }
+
+module.exports.getAllUsers = async (req, res) => {
+    try {
+        const users = await userModel.find({});
+        res.status(200).json(users);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ error: "An error occurred while retrieving users" });
+    }
+};
+
+
+module.exports.deleteUser = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const deletedUser = await userModel.findByIdAndDelete(id);
+        if (!deletedUser) {
+            throw new Error("User not found");
+        }
+        res.status(200).json({ message: "User deleted successfully" });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ error: "An error occurred while deleting the user" });
+    }
+};
+
+module.exports.getAdminUsers = async (req, res) => {
+    try {
+        const adminUsers = await userModel.find({ isAdmin: true });
+        res.status(200).json(adminUsers);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ error: "An error occurred while retrieving admin users" });
+    }
+};
+  
+
+  module.exports.getUserById = async (req, res) => {
+    const { id } = req.params;
+    try {
+      const user = await userModel.findById(id);
+      if (!user) {
+        throw new Error("User not found");
+      }
+      res.status(200).json(user);
+    } catch (err) {
+      console.log(err);
+      res.status(500).json({ error: "An error occurred while retrieving the user" });
+    }
+  };

@@ -7,7 +7,7 @@ body {
   display: flex;
 }
 
-.sidebar {
+.sidebarr {
   height: 100vmax;
   width: 300px;
   background: rgb(68, 132, 201);
@@ -111,7 +111,7 @@ header .toggle-btn {
   margin-left: 10px;
 }
 
-.main.close .sidebar {
+.main.close .sidebarr {
   width: 75px;
 
   .logo-div {

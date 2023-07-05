@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import Loading from '../../../component/Loading/Loading';
-import "../Contact/Contact.scss"
-import axios from 'axios';
-const Contact = () => {  
+import React, { useEffect, useState } from "react";
+import Loading from "../../../component/Loading/Loading";
+import "../Contact/Contact.scss";
+import axios from "axios";
+const Contact = () => {
   const [isActiv, setIsActiv] = useState(false);
-  const [data,setData]=useState()
+  const [data, setData] = useState();
   // const handleClick = () => {
   //   setIsActiv(!isActiv);
   // };
@@ -17,23 +17,20 @@ const Contact = () => {
     }, 1500);
   }, []);
 
-
-  useEffect(()=>{
-    axios.get('http://localhost:8080/contacts').then((res)=>{
-      setData(res.data)
-    })
-  })
+  useEffect(() => {
+    axios.get("http://localhost:8080/contacts").then((res) => {
+      setData(res.data);
+    });
+  });
   return (
-  <>
-   {loading ? (
-        <Loading/>
+    <>
+      {loading ? (
+        <Loading />
       ) : (
-    <div id='body'>
-       <section>
-    
-    
+        <div id="body">
+          <section>
             <h1>Contact us</h1>
-{/* <div className="button">
+            {/* <div className="button">
   <div><button className={isActiv ? 'active': "" } onClick={handleClick}>Park Bulvar</button></div>
   <div><button>Metro Park</button></div>
   <div><button>Flame Towers</button></div>
@@ -44,221 +41,79 @@ const Contact = () => {
 
   
 </div> */}
-<div className="commonns">
+            <div className="commonns">
+              {/* parkbulvar */}
+              <div>
+                {data &&
+                  data.map((item, index) => {
+                    return (
+                      <div key={index} class="contact-info parkbulvar">
+                        <div class="contact-info-item">
+                          <div class="contact-info-icon">
+                            <i class="fas fa-home"></i>
+                          </div>
 
-  
+                          <div class="contact-info-content">
+                            <h4>Address</h4>
+                            <p>{item.address}</p>
+                          </div>
+                        </div>
 
-  {/* parkbulvar */}
-  <div>     
-    
-    {
-      data&&data.map((item,index)=>{
-        return(
-    
-       <div key={index} class="contact-info parkbulvar">
+                        <div class="contact-info-item">
+                          <div class="contact-info-icon">
+                            <i class="fas fa-phone"></i>
+                          </div>
 
- 
-          <div class="contact-info-item">
-            <div class="contact-info-icon">
-              <i class="fas fa-home"></i>
-            </div>
-            
-            <div class="contact-info-content">
-              <h4>Address</h4>
-            <p>{item.address}</p>
-            </div>
-          </div>
-          
-          <div class="contact-info-item">
-            <div class="contact-info-icon">
-              <i class="fas fa-phone"></i>
-            </div>
-            
-            <div class="contact-info-content">
-              <h4>Phone</h4>
-              <p>{item.mainPhone}</p>
-            </div>
-          </div>
-          
-          <div class="contact-info-item">
-            <div class="contact-info-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            
-            <div class="contact-info-content">
-              <h4>Email</h4>
-             <p>{item.email}</p>
-            </div>
-          </div>
-        </div> 
-        )
-      })
-    }
+                          <div class="contact-info-content">
+                            <h4>Phone</h4>
+                            <p>{item.mainPhone}</p>
+                          </div>
+                        </div>
 
+                        <div class="contact-info-item">
+                          <div class="contact-info-icon">
+                            <i class="fas fa-envelope"></i>
+                          </div>
+
+                          <div class="contact-info-content">
+                            <h4>Email</h4>
+                            <p>{item.email}</p>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+              </div>
+
+              <div class="contact-form">
+                <form action="" id="contact-form">
+                  <h2>Send Message</h2>
+                  <div class="input-box">
+                    <input type="text" required="true" name="" />
+                    <span>Full Name</span>
+                  </div>
+
+                  <div class="input-box">
+                    <input type="email" required="true" name="" />
+                    <span>Email</span>
+                  </div>
+
+                  <div class="input-box">
+                    <textarea required="true" name=""></textarea>
+                    <span>Type your Message...</span>
+                  </div>
+
+                  <div class="input-box">
+                    <input type="submit" value="Send" name="" />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{/* metropark */}
-{/* 
- <div class="contact-info metropark">
-          <div class="contact-info-item">
-            <div class="contact-info-icon">
-              <i class="fas fa-home"></i>
-            </div>
-            
-            <div class="contact-info-content">
-              <h4>Address</h4>
-              <p>4671 Sugar Camp Road,<br/> Owatonna, Minnesota, <br/>55060</p>
-            </div>
-          </div>
-          
-          <div class="contact-info-item">
-            <div class="contact-info-icon">
-              <i class="fas fa-phone"></i>
-            </div>
-            
-            <div class="contact-info-content">
-              <h4>Phone</h4>
-              <p>571-457-2321</p>
-            </div>
-          </div>
-          
-          <div class="contact-info-item">
-            <div class="contact-info-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            
-            <div class="contact-info-content">
-              <h4>Email</h4>
-             <p>ntamerrwael@mfano.ga</p>
-            </div>
-          </div>
-        </div>  */}
-
-{/* flametower */}
-
- {/* <div class="contact-info flametower">
-          <div class="contact-info-item">
-            <div class="contact-info-icon">
-              <i class="fas fa-home"></i>
-            </div>
-            
-            <div class="contact-info-content">
-              <h4>Address</h4>
-              <p>4671 Sugar Camp Road,<br/> Owatonna, Minnesota, <br/>55060</p>
-            </div>
-          </div>
-          
-          <div class="contact-info-item">
-            <div class="contact-info-icon">
-              <i class="fas fa-phone"></i>
-            </div>
-            
-            <div class="contact-info-content">
-              <h4>Phone</h4>
-              <p>571-457-2321</p>
-            </div>
-          </div>
-          
-          <div class="contact-info-item">
-            <div class="contact-info-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            
-            <div class="contact-info-content">
-              <h4>Email</h4>
-             <p>ntamerrwael@mfano.ga</p>
-            </div>
-          </div>
-        </div>  */}
-
-
-
-
-{/* zaqulba */}
-{/* 
-<div class="contact-info zaqulba">
-          <div class="contact-info-item">
-            <div class="contact-info-icon">
-              <i class="fas fa-home"></i>
-            </div>
-            
-            <div class="contact-info-content">
-              <h4>Address</h4>
-              <p>4671 Sugar Camp Road,<br/> Owatonna, Minnesota, <br/>55060</p>
-            </div>
-          </div>
-          
-          <div class="contact-info-item">
-            <div class="contact-info-icon">
-              <i class="fas fa-phone"></i>
-            </div>
-            
-            <div class="contact-info-content">
-              <h4>Phone</h4>
-              <p>571-457-2321</p>
-            </div>
-          </div>
-          
-          <div class="contact-info-item">
-            <div class="contact-info-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            
-            <div class="contact-info-content">
-              <h4>Email</h4>
-             <p>ntamerrwael@mfano.ga</p>
-            </div>
-          </div>
-        </div> */}
-
-
-
-
-        
-        <div class="contact-form">
-          <form action="" id="contact-form">
-            <h2>Send Message</h2>
-            <div class="input-box">
-              <input type="text" required="true" name=""/>
-              <span>Full Name</span>
-            </div>
-            
-            <div class="input-box">
-              <input type="email" required="true" name=""/>
-              <span>Email</span>
-            </div>
-            
-            <div class="input-box">
-              <textarea required="true" name=""></textarea>
-              <span>Type your Message...</span>
-            </div>
-            
-            <div class="input-box">
-              <input type="submit" value="Send" name=""/>
-            </div>
-          </form>
-        </div>
-        
-   </div>
-  </section>
-  
-    </div>
       )}
     </>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

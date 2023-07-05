@@ -6,7 +6,7 @@ function AdminData() {
   const [admin, setAdmin] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/auth/admin-users")
+    axios.get("http://localhost:3000/admin/admindata")
       .then(res => {
         setAdmin(res.data);
         console.log(res.data);

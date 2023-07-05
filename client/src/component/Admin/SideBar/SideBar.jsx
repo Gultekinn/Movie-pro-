@@ -4,6 +4,7 @@ import { RxHamburgerMenu } from 'react-icons/rx'
 import { GrClose } from 'react-icons/gr'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import { FaUser } from 'react-icons/fa'
 
 import { AiFillDashboard } from 'react-icons/ai'
 import { BiSolidMoviePlay } from 'react-icons/bi'
@@ -30,8 +31,8 @@ const SideBar = () => {
 
   return (
     <div className={`main ${isSidebarOpen ? '' : 'close'}`} id="main">
-      <div className="sidebar">
-        <div className="sidebar__top">
+      <div className="sidebarr">
+        <div className="sidebarr__top">
           <div className='tgl'>
             {isSidebarOpen ? (
               <GrClose
@@ -69,10 +70,13 @@ const SideBar = () => {
                 <FaMicroblog/>
                 {isSidebarOpen && <Link to="contactdata">Contact</Link>}
               </li>
-             
+              <li className='userpage'>
+                <FaUser />
+                {isSidebarOpen && <Link to="userdata">Users</Link>}
+              </li>
               <li className='adminpage'>
               <RiAdminFill/>
-              {isSidebarOpen && <Link to="userdata">Admin</Link>}
+              {isSidebarOpen && <Link to="admindata">Admin</Link>}
               </li>
               <li className='adminpage' onClick={handleLogout}>
                 <LuLogOut />
