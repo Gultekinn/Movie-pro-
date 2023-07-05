@@ -2,7 +2,7 @@ import React from 'react'
 import "../Footer/Footer.scss"
 const Footer = () => {
   return (
-    <div>
+    <>
       <div className="footer">
         <div className="footer__logo">
           <img src="https://webstrot.com/html/moviepro/html/images/header/logo.png" alt="" />
@@ -22,7 +22,7 @@ const Footer = () => {
 
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

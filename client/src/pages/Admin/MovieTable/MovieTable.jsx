@@ -52,6 +52,7 @@ const handleUpdate = (id) => {
               className="searchinp"
               type="text"
               placeholder="Search..."
+              id="innpt"
             />
           </div>
         </div>
@@ -97,15 +98,15 @@ const handleUpdate = (id) => {
                   <td>{item.languageType}</td>
                   <td>{item.price}</td>
                   <td className="td">
-                    <button  onClick={() => handleDelete(item._id)}>
+                    <button id="buuton"  onClick={() => handleDelete(item._id)}>
                       < TiDeleteOutline/>
                     </button>
                     
 
-                    <button onClick={()=>handleUpdate(item._id)}>
+                    <button id="buuton" onClick={()=>handleUpdate(item._id)}>
                       <FaUserEdit  />
                     </button>
-                    <button onClick={() => handleDetail(item._id)}>
+                    <button id="buuton" onClick={() => handleDetail(item._id)}>
                       <BiMessageSquareDetail />
                     </button>
                   </td>

@@ -99,9 +99,9 @@ function AddMovie() {
                       Film: <span style={{ color: "red" }}>*</span>
                     </span>
                     <Field id="label" name="filmType" as="select">
-                      <option value="2d">2D</option>
-                      <option value="3d">3D</option>
-                      <option value="2d/3d">2D/3D</option>
+                      <option value="2D">2D</option>
+                      <option value="3D">3D</option>
+                      <option value="2D 3D">2D 3D</option>
                     </Field>
                     {errors.filmType ? (
                       <p style={{ color: "red" }}>{errors.filmType}</p>

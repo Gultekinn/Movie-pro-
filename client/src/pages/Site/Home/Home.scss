@@ -1,4 +1,8 @@
-
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
 .form{
     width: 300px;
     height: 200px;
@@ -30,164 +34,189 @@ button{
 
    }
 
-.onee{
-   width: 100%;
-   height: 100vh;
-   background-image: url('https://ecf5j3nfg2f.exactdn.com/wp-content/uploads/2021/02/134.jpg?strip=all&lossy=1&ssl=1');
-background-size: cover;
-background-repeat: no-repeat;
-}
 
-.twoo{
+.parallax {
    width: 100%;
-   height: 100vh;
-   background-image: url('https://wallpapercave.com/wp/wp1870108.jpg');
-background-size: cover;
-background-repeat: no-repeat;
-object-fit: cover;
-}
+   height: 800px;
+   background-image: url(5c3dbd4e7edc9.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
 
-.three{
-   width: 100%;
-   height: 100vh;
-   background-image: url('https://millardwestcatalyst.com/wp-content/uploads/2021/11/Eternals-900x507.jpeg');
-background-size: cover;
-background-repeat: no-repeat;
-object-fit: cover;
-}
-.divv1{
-   width: 100%;
-   height: 100vh;
-    background-color: rgba(0, 0, 255, 0.231);
-}
-// @media only screen and (max-width: 1335px) {
-//    .hero1{
-//     display: block;
-//     width:100%;
-//     height: 600px;
-//    }
-// }
-// @media only screen and (max-width: 1077px) {
-//     .hero1{
-//      display: block;
-//      width:100%;
-//      height: 550px;
-//     }
-//  }
-//  @media only screen and (max-width: 990px) {
-//     .hero1{
-//      display: block;
-//      width:100%;
-//      height:500px;
-//     }
-//  }
-//  @media only screen and (max-width: 895px) {
-//     .hero1{
-//      display: block;
-//      width:100%;
-//      height:470px;
-//     }
-//  }
-//  @media only screen and (max-width:810px) {
-//     .hero1{
-//      display: block;
-//      width:100%;
-//      height:430px;
-//     }
-//  }
-//  @media only screen and (max-width:777px) {
-//     .hero1{
-//      display: block;
-//      width:100%;
-//      height:390px;
-//     }
-//  }
-//  @media only screen and (max-width:692px) {
-//     .hero1{
-//      display: block;
-//      width:100%;
-//      height:360px;
-//     }
-//  }
-//  @media only screen and (max-width:641px) {
-//     .hero1{
-//      display: block;
-//      width:100%;
-//      height:320px;
-//     }
-//  }
-//  @media only screen and (max-width:578px) {
-//     .hero1{
-//      display: block;
-//      width:100%;
-//      height:280px;
-//     }
-//  }
-//  @media only screen and (max-width:520px) {
-//     .hero1{
-//      display: block;
-//      width:100%;
-//      height:250px;
-//     }
-//  }
-//  @media only screen and (max-width:450px) {
-//     .hero1{
-//      display: block;
-//      width:100%;
-//      height:220px;
-//     }
-//  }
-//  @media only screen and (max-width:400px) {
-//     .hero1{
-//      display: block;
-//      width:100%;
-//      height:190px;
-//     }
-//  }
+   &__wrapper {
+     width: 100%;
+     height: 100%;
+   display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+ 
+     background-color: rgba(0, 0, 0, 0.451);
 
-  @media only screen and (max-width: 1866px){
-
-.onee{
-   display: block;
-width: 100%;
-height: 100vh;
-}
-  }
-  @media only screen and (max-width: 1626px){
-
-   .onee{
-      display: block;
-   width: 100%;
    }
-     }
+ }
+ 
 
-     @media only screen and (max-width: 1605px){
+ @media screen and (max-width: 1200px) {
+   .hero .hero__wrapper__middle {
+     width: 100% !important;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+ 
+   .hero .hero__wrapper__middle button {
+     width: 100%;
+     font-size: 13px;
+     padding: 10px;
+     margin-top: 20px;
+   }
+ 
+   .hero .hero__wrapper__middle {
+     background-color: transparent;
+     border: none;
+     padding-bottom: 0;
+   }
+ 
+   .hero-main {
+     width: 50%;
+   }
+ 
+   .hero__wrapper__middle form {
+     width: 100%;
+   }
+ 
+   .hero .hero__wrapper__middle form select {
+     width: 100%;
+   }
+ 
+   .hero .hero__wrapper__title {
+     display: none;
+   }
+ }
+ 
+ @media screen and (max-width: 1100px) {
+   .adventures__gallery {
+     flex-direction: column;
+   }
+ 
+   .adventures__gallery__left {
+     width: 100%;
+     justify-content: center;
+   }
+ 
+   .adventures__gallery__left .gallery__div {
+     margin: 10px 20px;
+   }
+ 
+   .statistic {
+     flex-wrap: wrap;
+   }
+ 
+   .statistic .s-card {
+     width: 100%;
+   }
+ 
+   .browse {
+     flex-wrap: wrap;
+   }
+ 
+   .browse__left,
+   .browse__right {
+     width: 100%;
+   }
+ 
+   .footer {
+     padding: 40px 20px !important;
+   }
+ 
+   .footer__bottom {
+     padding: 20px 20px !important;
+   }
+ 
+   .partners {
+     display: none;
+   }
+ 
+   .guides__cards {
+     flex-wrap: wrap;
+   }
+ }
+ 
+ @media screen and (max-width: 600px) {
+   .footer__contact ul div {
+     width: 100%;
+     align-items: center;
+   }
+ 
+   .day {
+     display: none;
+     visibility: hidden;
+   }
+ 
+   .f__contact {
+     flex-wrap: wrap;
+   }
+ 
+   .footer__bottom {
+     flex-wrap: wrap;
+     justify-content: center !important;
+   }
+ 
+   .footer__bottom span {
+     margin-bottom: 15px;
+   }
+ 
+   .adventures__gallery__right {
+     width: auto !important;
+   }
+ 
+   .popular__datas__card__img__wrapper {
+     width: auto;
+   }
+ 
+   .sec4__wrapper__cards {
+     height: auto !important;
+     width: 100% !important;
+   }
+ 
+   .sec4__wrapper {
+     padding: 20px;
+   }
+ 
+   .sec5__cards {
+     padding: 20px;
+   }
+ 
+   .section2__text {
+     padding: 10px;
+   }
+ }
+ 
+ 
+ @media screen and (max-width: 1370px) {
+   .hero .hero__wrapper__bottom ul {
+     justify-content: flex-start;
+   }
+ }
+ 
+ @media screen and (max-width: 900px) {
+   .block p {
+     font-size: 25px;
+   }
+ }
+ 
+ @media screen and (max-width: 720px) {
+   .block p {
+     font-size: 20px;
+   }
+ }
+ 
+ @media screen and (max-width: 580px) {
+   .block p {
+     font-size: 17px;
+   }
+ }
 
-      .onee{
-         display: block;
-      width: 100%;
-      height: 100vh;
-      }
-        }
-
-
-        @media only screen and (max-width: 1595px){
-
-         .onee{
-            display: block;
-         width: 100%;
-         height: 100vh;
-         }
-           }
-
-           @media only screen and (max-width: 1585px){
-
-            .onee{
-               display: block;
-            width: 100%;
-            height: 100vh;
-            }
-              }
-   
-   
-
+ 

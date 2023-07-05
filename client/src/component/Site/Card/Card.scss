@@ -6,16 +6,17 @@
     gap: 40px;
     &__card{
         padding: 20px;
-        width: 240px;
+        width: 300px;
        display: flex;
        flex-direction: column;
        justify-content: center;
-        border: 1px solid white;
+        background-color: rgba(112, 115, 114, 0.396);
         border-radius: 10px;
         h3{
-            font-size: 14px;
+            font-size: 21px;
             margin-top: 10px;
-        }
+            color: rgb(84, 7, 167);
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
         &__img{
             img{
                 width: 170px;
@@ -41,19 +42,270 @@ margin-right: 10px;
         }
         }
         #ticket{
-            width: 100px;
-            height: 35px;
+            width: 120px;
+            height: 45px;
             margin-top: 20px;
             margin: auto;
             margin-top: 10px;
-            background: linear-gradient( 45deg,red,blue);
-          border: none;
+background-color: blue;        
+  border: none;
           border-radius: 5px;
-          color: black;
           font-size: 14px;
           font-weight: 700;
           cursor: pointer;
+          color: white;
+        }
+        #ticket:hover{
+            background-color: rgba(0, 0, 255, 0.276);
         }
     }
      
+}
+
+#put{
+    padding: 7px;
+    border: 2px solid blue;
+    background-color: transparent;
+    border-radius: 10px;
+    color: white;
+}
+
+.section{
+   
+    width: 90%;
+   margin: auto;
+   margin-top: 30px;
+   color: white;
+   &__button{
+    padding: 40px 40px;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 70px;
+&__button{
+  display: flex;
+  flex-wrap: wrap;
+}
+button{
+    width: 140px;
+    height: 30px;
+    border: 1px solid white;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+button:hover{
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+   }
+
+  .header_class{
+  
+    &_label{
+       
+        border-radius: 7px;
+        background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    font-size: 20px;
+    #opti{
+        
+        border-radius: 7px;
+background-color: black; 
+   color: white;
+    border: 1px solid white;
+    font-size: 20px;
+    }
+    }
+  }
+}
+
+.payment-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+  }
+  
+  .payment-modal {
+  background-color: #211f1f;
+    width: 450px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: rgb(255, 255, 255);
+
+  }
+  
+  .payment-modal h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: rgb(255, 234, 234);
+
+  }
+  
+  .payment-modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: rgb(255, 255, 255);
+
+  }
+  
+  .payment-modal form label {
+    display: flex;
+    flex-direction: column;
+    color: rgb(255, 252, 252);
+
+  }
+  
+  .payment-modal form input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    color: white;
+
+  }
+  
+  .payment-modal form button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+  }
+  
+  .payment-modal form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .payment-modal button {
+    margin-top: 20px;
+    padding: 8px 16px;
+    background-color: #ccc;
+
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .payment-modal button:hover {
+    background-color: #999;
+    color: rgb(252, 247, 247);
+
+  }
+  .language-select select {
+    width: 200px;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #ccc;
+    padding: 10px;
+  }
+  
+  .language-select select option {
+    padding: 4px;
+    background-color: transparent;
+    color: #ccc;
+    padding: 10px;
+  }
+
+/* Card.scss */
+
+.ticket-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px); /* Arka planı blur yapar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket-modal {
+  background-color: #211f1f;
+  padding: 40px;
+  width: 400px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+}
+h2{
+  color: black;
+}
+.ticket-modal h2 {
+  margin-top: 0;
+}
+
+.ticket-modal p {
+  margin-bottom: 10px;
+}
+
+.ticket-modal form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#slll{
+  width: 230px;
+  margin: auto;
+     background-color: transparent;
+    color: white;
+    padding: 10px;
+    option{
+         background-color: transparent;
+    color: rgb(0, 0, 0);
+    }
+}
+.ticket-modal label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.ticket-modal input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  width: 230px;
+  margin: auto;
+     background-color: transparent;
+    color: white;
+}
+
+.ticket-modal button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #007bff;
+  
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.ticket-modal button[type="submit"] {
+  margin-top: 20px;
 }

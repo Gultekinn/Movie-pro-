@@ -24,6 +24,7 @@ import Updatecontact from "../pages/Admin/Updatecontact/Updatecontact";
 import Detailcontact from "../pages/Admin/Detailcontact/Detailcontact";
 import AddContact from "../pages/Admin/AddContact/AddContact";
 import Dashboard from "../pages/Admin/DashBoard/DashBoard";
+import AdminData from "../pages/Admin/AdminData/AdminData";
 
 export const ROUTES = [
   {
@@ -134,6 +135,10 @@ export const ROUTES = [
           {
             path:"addcontact",
             element:<AddContact/>
+          },
+          {
+            path: "admindata",
+            element: <AdminData/>
           }
         ],
       },

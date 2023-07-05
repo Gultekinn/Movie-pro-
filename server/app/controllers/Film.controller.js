@@ -40,7 +40,7 @@ const filmController = {
   },
   edit: async (req, res) => {
     const { id } = req.params;
-    const { filmType, video, date, age, time, languageType, price } = req.body;
+    const { filmType, video, date, age, time, languageType, price,title } = req.body;
     const mainImageFile = req.files["mainimage"];
     const slideImageFile = req.files["slideimage"];
 

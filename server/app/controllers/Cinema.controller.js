@@ -12,7 +12,7 @@ getById: async(req,res)=>{
     const target = await Cinema.findById(id)
     res.send(target)
 },
-add: async(req, res, next) => {
+add: async(req, res) => {
     const {filename} = req.body
     let newCinema = new Cinema({
         image: req.file.filename,

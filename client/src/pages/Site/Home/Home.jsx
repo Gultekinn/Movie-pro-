@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "../Home/Home.scss";
 import SimpleSlider from "../../../component/Site/SlickSlider/SimpleSlider";
-import Hero1 from "../../../component/Site/Hero1/Hero1";
+import  Card from "../../../component/Site/Card/Card";
 import Slide from "../../../component/Site/Slide/Slide";
 import Hero2 from "../../../component/Site/Hero2/Hero2";
 import "../Home/Home.scss";
 import Loading from "../../../component/Loading/Loading";
+
 const Home = () => {
   const [loading, setLoading] = useState(false);
+  const videoSource="SP"
   useEffect(() => {
     setLoading(true);
     window.scrollTo({ top: 0 });
@@ -21,43 +23,20 @@ const Home = () => {
         <Loading />
       ) : (
         <div>
-          <div className="sllider">
-            <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
+          <div className="parallax">
+            {/* <video autoPlay="autoPlay" logo="logo">
+<source src={videoSource} type="video/mp4"/>
+            </video> */}
+            <div className="parallax__wrapper">
+              <SimpleSlider />
+            </div>
+          </div>
 
- 
-  <div className="carousel-inner">
-    <div className="carousel-item active onee">
-      <div className="divv1">
-
-      </div>
-    </div>
-    <div class="carousel-item twoo">
-<div className="divv1">
-        
-      </div>
-    </div>
-    <div className="carousel-item three">
-    <div className="divv1">
-        
-        </div>
-    </div>
-  </div>
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Previous</span>
-  </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Next</span>
-  </button>
-
-</div></div>
-          
-
-
-          <Hero1 />
+          <Card/>
           <Slide />
-          <Hero2 />
+
+                      <Hero2 />
+
         </div>
       )}
     </>

@@ -4,6 +4,7 @@ import { TiDeleteOutline } from "react-icons/ti";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import { FaUserEdit } from "react-icons/fa";
 import axios from "axios";
+
 import { useNavigate } from "react-router-dom";
 const ContactTable = () => {
   const navigate = useNavigate();
@@ -49,6 +50,7 @@ const handleUpdate = (id) => {
               className="searchinp"
               type="text"
               placeholder="Search..."
+              id="innpt"
             />
           </div>
         </div>
@@ -80,15 +82,15 @@ const handleUpdate = (id) => {
                   <td>{item.address}</td>
                   <td>{item.email}</td>
                   <td>
-                    <button onClick={() => handleDelete(item._id)}>
+                    <button id="buuton"  onClick={() => handleDelete(item._id)}>
                       <TiDeleteOutline />
                     </button>
-                    <button onClick={()=>{
+                    <button id="buuton"  onClick={()=>{
                       handleUpdate(item._id)
                     }}>
                       <FaUserEdit />
                     </button>
-                    <button onClick={()=>{
+                    <button id="buuton" onClick={()=>{
                       handleDetail(item._id)
                     }}>
                       <BiMessageSquareDetail />

@@ -1,3 +1,44 @@
-.commons{
-padding: 50px 70px;
-}
+
+.commons {
+    padding: 50px 70px;
+    font-size: 22px;
+    
+  }
+  .addnewproduct {
+    border: none;
+    margin-left: 10px;
+  background-color: blue;  
+    border-radius: 20px;
+    width: 230px;
+    height: 40px;
+    color: white;
+  font-weight: 800;
+  }
+  
+  .divv {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px;
+    input {
+      background-color: transparent;
+      border: 1px solid lightgray;
+      border-radius: 20px;
+      padding: 10 px 0;
+    }
+  }
+  #buuton{
+     color: red;
+    border: none;
+    font-size: 20px;
+    margin-left: 10px;
+    background-color: transparent;
+  }
+  #innpt {
+    color: white;
+    width: 230px;
+    height: 40px;
+    padding: 12px;
+    font-weight: 600;
+  }
+  

@@ -11,7 +11,7 @@ const DetailMovie = () => {
     setData(res.data)
     console.log(res.data)
   })
- })
+ },[])
   return (
     <> 
    

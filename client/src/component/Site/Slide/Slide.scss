@@ -51,15 +51,15 @@ display: flex;
 .image1{
   width: 300px; 
   height: 187px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  background-color: rgba(6, 23, 60, 0.082);
 }
 span {
-
 margin: auto;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 font-size: 2rem;
-
+font-family: 'Courier New', Courier, monospace;
 }
 
 @keyframes rotate360 {
@@ -112,4 +112,9 @@ transform: rotateY(-360deg);
 .image:nth-child(9) {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAylOxES8lW5Wc7mnNfBXcv3gwoLKhZwtqHQ&usqp=CAU");
   transform: rotateY(320deg) translateZ(430px);
+}
+@media only screen and (max-width: 1485px){
+  .commons{
+   display: none;
+} 
 }

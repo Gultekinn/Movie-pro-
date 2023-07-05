@@ -1,191 +1,193 @@
-body{
-    padding: 0;
-
+body {
+  padding: 0;
 }
 
 .main {
-    width: 100%;
-    display: flex;
+  width: 100%;
+  display: flex;
 }
 
 .sidebar {
-    height: 100vmax;
-    width: 300px;
-    background: rgb(68, 132, 201);
-    background: linear-gradient(90deg, rgb(98, 88, 235) 0%, rgbargb(88, 88, 105), rgb(17, 37, 83) 92%);
-    transition: all 0.5s ease-in-out;
-    
+  height: 100vmax;
+  width: 300px;
+  background: rgb(68, 132, 201);
+  background: linear-gradient(
+    90deg,
+    rgb(98, 88, 235) 0%,
+    rgbargb(88, 88, 105),
+    rgb(17, 37, 83) 92%
+  );
+  transition: all 0.5s ease-in-out;
 
-    .logo-div {
-        width: 100%;
-        padding: 5px 0 20px;
-        border-bottom: 1px solid #252525b3;
+  .logo-div {
+    width: 100%;
+    padding: 5px 0 20px;
+    border-bottom: 1px solid #252525b3;
 
-        .admin-logo {
-            width: 180px;
-            padding-left: 40px;
-        }
+    .admin-logo {
+      width: 180px;
+      padding-left: 40px;
     }
+  }
 
-    .admin-items {
-        width: 100%;
-        padding: 40px;
+  .admin-items {
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      li {
+        border-radius: 30px;
+        font-size: 27px;
+        padding: 15px 0 15px 13px;
         display: flex;
-        flex-direction: column;
-        gap: 20px;
-        overflow: hidden;
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-
-            li {
-                border-radius: 30px;
-                font-size: 27px;
-                padding: 15px 0 15px 13px;
-                display: flex;
-                align-items: center;
-                color: white;
-                gap: 10px;
-                font-weight: bold;
-
-                &:hover {
-                    background-color: #252525b3;
-                    transition: 0.6s;
-                }
-
-
-                a {
-                    text-decoration: none;
-                    color: white;
-                    font-size: 18px;
-                }
-            }
-        }
-    }
-
-    .icon-only {
         align-items: center;
-        padding: 20px;
-        gap: 10px;
         color: white;
+        gap: 10px;
+        font-weight: bold;
+
+        &:hover {
+          background-color: #252525b3;
+          transition: 0.6s;
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: 18px;
+        }
+      }
     }
+  }
+
+  .icon-only {
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    color: white;
+  }
 }
 
 .content {
-    width: calc(100% - 300px);
-    transition: all 0.5s ease-in-out;
+  width: calc(100% - 300px);
+  transition: all 0.5s ease-in-out;
 }
 
 header {
-    background: rgb(23, 64, 162);
-    background: linear-gradient(90deg, rgb(59, 106, 199) 0%, rgb(109, 118, 201) 25%, rgb(21, 35, 106));
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    padding: 0px 20px;
+  background: rgb(23, 64, 162);
+  background: linear-gradient(
+    90deg,
+    rgb(59, 106, 199) 0%,
+    rgb(109, 118, 201) 25%,
+    rgb(21, 35, 106)
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0px 20px;
 }
 
 header .toggle-btn {
-    width: 30px;
-    height: 20px;
-    color: white;
+  width: 30px;
+  height: 20px;
+  color: white;
 }
 
 .header-logo {
-    font-size: 30px;
-    font-weight: bold;
-    color: #fff;
-    margin-left: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 10px;
 }
 
 .main.close .sidebar {
-    width: 75px;
+  width: 75px;
 
-    .logo-div {
-        display: none;
-    }
+  .logo-div {
+    display: none;
+  }
 
-    .container .admin-items ul li:hover {
-        background-color: transparent;
-    }
+  .container .admin-items ul li:hover {
+    background-color: transparent;
+  }
 
-    .container{
-        display: none;
-        width: 100%;
-    }
-
-
+  .container {
+    display: none;
+    width: 100%;
+  }
 }
 
 .main.close .content {
-    width: 100%;
+  width: 100%;
 }
 
-
 .adminimg {
-    margin-top: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
-    .admin-logo-img {
-        width: 60px;
-        height: 60px;
-    }
+  .admin-logo-img {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 #menu {
-    color: purple;
+  color: purple;
 }
-    
-
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .admin-img {
-    background-color: green;
-    border-radius: 50%;
-    width: 65px;
-    height: 65px;
-    overflow: hidden;
+  background-color: green;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  overflow: hidden;
 
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .admin-github {
-    text-decoration: none;
-    color: white;
-    font-size: 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
 }
 
 .admin-header-links {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .tgl {
-    text-align: start;
+  text-align: start;
 }
 
 .content {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
-#imggg{
-    border-radius: 50%;
+#imggg {
+  border-radius: 50%;
 }

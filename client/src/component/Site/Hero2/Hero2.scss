@@ -1,10 +1,12 @@
-h1{
+.ht{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+padding: 100px 0px;
 }
 .commonn{
     padding: 40px 40px;
     display: flex;
    justify-content: center;
+flex-wrap: wrap;
    &__left{
     width: 600px;
     height: 800px;

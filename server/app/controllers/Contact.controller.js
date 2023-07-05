@@ -12,7 +12,7 @@ getById: async(req,res)=>{
     const target = await Contact.findById(id)
     res.send(target)
 },
-add: async(req, res, next) => {
+add: async(req, res) => {
     const {filename} = req.body
     let newContact = new Contact({
         image: req.file.filename,
@@ -26,6 +26,7 @@ add: async(req, res, next) => {
 edit:async(req,res)=>{
     const {id} = req.params
     const updateContact = await Contact.findByIdAndUpdate(id , req.body)
+
     res.send(updateContact)
 },
 delete: async (req,res)=>{

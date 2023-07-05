@@ -3,18 +3,31 @@ import '../SideBar/SideBar.scss';
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { GrClose } from 'react-icons/gr'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+
 import { AiFillDashboard } from 'react-icons/ai'
 import { BiSolidMoviePlay } from 'react-icons/bi'
 import { TbActivityHeartbeat } from 'react-icons/tb'
 import { FaMicroblog} from 'react-icons/fa'
 import { RiAdminFill } from 'react-icons/ri'
 import Content from '../../../layout/Admin/Content/Content';
-
+import { useCookies } from 'react-cookie';
+import { LuLogOut } from 'react-icons/lu'
 const SideBar = () => {
+  const [cookies, setCookie, removeCookie] = useCookies(["jwt"]);
+  const handleLogout = () => {
+    console.log(cookies);
+    removeCookie("jwt")
+    navigate('/login')
+
+  }
+  const navigate = useNavigate()
+
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
       };
+
   return (
     <div className={`main ${isSidebarOpen ? '' : 'close'}`} id="main">
       <div className="sidebar">
@@ -61,6 +74,10 @@ const SideBar = () => {
               <RiAdminFill/>
               {isSidebarOpen && <Link to="userdata">Admin</Link>}
               </li>
+              <li className='adminpage' onClick={handleLogout}>
+                <LuLogOut />
+                {isSidebarOpen && <Link to="admindata">Logout</Link>}
+              </li>
             </ul>
           </div>
         </div>
@@ -75,7 +92,10 @@ const SideBar = () => {
               onClick={toggleSidebar}
             />
           )}
-        </header>
+            <div className="admin-img">
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="admin__img" />
+          </div>
+        </header> 
         <Content />
       </div>
     </div>

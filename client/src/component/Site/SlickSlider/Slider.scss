@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.slider {
+  width: 500px;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+
+  &__div {
+    position: relative;
+    margin-left: 67px;
+    width: 350px;
+    height: 420px;
+    overflow: hidden;
+    &__img {
+      width: 350px;
+      height: 420px;
+      img {
+        width: 350px;
+        height: 420px;
+        object-fit: cover;
+        transition: .5s ease;
+      }
+    }
+
+    &__content {
+      width: 370px;
+      height: 420px;
+padding: 20px;
+      color: white;
+
+      font-size: 1.2rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+background: rgba(20, 57, 220, 0.8);   
+
+margin: auto;
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-size: 20px;
+      font-weight: 700;
+      visibility: hidden;
+      .startt {
+        color: rgb(239, 239, 0);
+        font-size: 20px;
+      }
+    }
+  }
+}
+.slider__div:hover .slider__div__content {
+  visibility: visible;
+  cursor: pointer;
+}
+.slider__div:hover img {
+  transform: scale(1.1);
+}
+#hr{
+  width: 0;
+}
+
+#ticket{
+  width: 120px;
+  height: 45px;
+  margin-top: 20px;
+  margin: auto;
+  margin-top: 10px;
+background-color: rgb(245, 44, 13);        
+border: none;
+border-radius: 5px;
+font-size: 14px;
+font-weight: 700;
+cursor: pointer;
+color: white;
+}
+
+
+.payment-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.payment-modal {
+  background-color: #fff;
+  width: 450px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: black;
+
+}
+
+.payment-modal h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: black;
+
+}
+
+.payment-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: black;
+
+}
+
+.payment-modal form label {
+  display: flex;
+  flex-direction: column;
+  color: black;
+
+}
+
+.payment-modal form input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: black;
+
+}
+
+.payment-modal form button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: black;
+
+}
+
+.payment-modal form button:hover {
+  background-color: #0056b3;
+}
+
+.payment-modal button {
+  margin-top: 20px;
+  padding: 8px 16px;
+  background-color: #ccc;
+  color: black;
+
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.payment-modal button:hover {
+  background-color: #999;
+  color: black;
+
+}
