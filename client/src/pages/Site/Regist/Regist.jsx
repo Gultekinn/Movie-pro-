@@ -6,6 +6,7 @@ import * as Yup from 'yup'
 import axios from 'axios'
 import { Toaster, toast } from 'react-hot-toast'
 import "../Regist/Regist.scss"
+import { Helmet } from "react-helmet";
 const Regist = () => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -19,6 +20,9 @@ const Regist = () => {
   const navigate = useNavigate();
   return (
     <>
+    <Helmet>
+                <title>Register</title>
+            </Helmet>
       {loading ? (
         <Loading />
       ) : (

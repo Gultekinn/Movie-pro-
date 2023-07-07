@@ -6,6 +6,7 @@ import * as Yup from 'yup'
 import axios from 'axios'
 import { Toaster, toast } from 'react-hot-toast'
 import "../Login/Login.scss"
+import { Helmet } from "react-helmet";
 const Login = () => {
   const navigate = useNavigate()
 
@@ -22,6 +23,9 @@ const Login = () => {
 
   return (
     <>
+    <Helmet>
+                <title>Login</title>
+            </Helmet>
       {loading ? (
         <Loading />
       ) : (

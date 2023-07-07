@@ -26,6 +26,8 @@ import AddContact from "../pages/Admin/AddContact/AddContact";
 import Dashboard from "../pages/Admin/DashBoard/DashBoard";
 import AdminData from "../pages/Admin/AdminData/AdminData";
 import DetailUser from "../pages/Admin/DetailUser/DetailUser";
+import Vipdetail from "../pages/Site/Vipdetail/Vipdetail";
+import Detail from "../pages/Site/Detail/Detail";
 
 export const ROUTES = [
   {
@@ -70,6 +72,14 @@ export const ROUTES = [
         path: "regist",
         element: <Regist />,
       },
+      {
+        path:"/:id",
+        element:<Vipdetail/>
+      },
+      {
+        path:"/:id",
+        element:<Detail/>
+      }
     ],
   },
   {

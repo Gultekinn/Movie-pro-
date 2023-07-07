@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "../Campaign/Campaign.scss"
 import CampaingCard from '../../../component/Site/CampaingCard/CampaingCard'
 import Loading from '../../../component/Loading/Loading';
+import { Helmet } from 'react-helmet';
 const Campaign = () => {
   const [data,setData]=useState([])
   const [loading, setLoading] = useState(false);
@@ -17,6 +18,10 @@ const Campaign = () => {
  
   return (
     <>
+
+<Helmet>
+                <title>Campaing</title>
+            </Helmet>
      {
       loading ? (
       <Loading/>

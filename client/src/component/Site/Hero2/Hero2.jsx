@@ -8,6 +8,7 @@ const Hero2 = () => {
 <div className="titlec"></div>
         <div className="commonn__left">
           <div className="card1"></div>
+
           <div className="card2">
             <div className="card2__one"></div>
             <div className="card2__two"></div>

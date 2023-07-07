@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Loading from "../../../component/Loading/Loading";
 import "../Contact/Contact.scss";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 const Contact = () => {
   const [isActiv, setIsActiv] = useState(false);
   const [data, setData] = useState();
@@ -24,6 +25,9 @@ const Contact = () => {
   });
   return (
     <>
+    <Helmet>
+                <title>Contact</title>
+            </Helmet>
       {loading ? (
         <Loading />
       ) : (
@@ -47,7 +51,7 @@ const Contact = () => {
                 {data &&
                   data.map((item, index) => {
                     return (
-                      <div key={index} class="contact-info parkbulvar">
+                      <div key={index} class="contact-info ">
                         <div class="contact-info-item">
                           <div class="contact-info-icon">
                             <i class="fas fa-home"></i>
@@ -89,22 +93,22 @@ const Contact = () => {
                 <form action="" id="contact-form">
                   <h2>Send Message</h2>
                   <div class="input-box">
-                    <input type="text" required="true" name="" />
+                    <input id="contactt" type="text" required="true" name="" />
                     <span>Full Name</span>
                   </div>
 
                   <div class="input-box">
-                    <input type="email" required="true" name="" />
+                    <input id="contactt" type="email" required="true" name="" />
                     <span>Email</span>
                   </div>
 
                   <div class="input-box">
-                    <textarea required="true" name=""></textarea>
+                    <textarea id="contactt" required="true" name=""></textarea>
                     <span>Type your Message...</span>
                   </div>
 
                   <div class="input-box">
-                    <input type="submit" value="Send" name="" />
+                    <input id="contactt" type="submit" value="Send" name="" />
                   </div>
                 </form>
               </div>

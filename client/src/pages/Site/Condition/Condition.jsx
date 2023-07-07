@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../Condition/Condition.scss";
 import Loading from "../../../component/Loading/Loading";
+import { Helmet } from "react-helmet";
+
 const Condition = () => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -12,6 +14,9 @@ const Condition = () => {
   }, []);
   return (
     <>
+    <Helmet>
+                <title>Condition</title>
+            </Helmet>
      {loading ? (
         <Loading/>
       ) : (

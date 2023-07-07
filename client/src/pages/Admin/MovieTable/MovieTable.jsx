@@ -5,6 +5,7 @@ import { FaUserEdit } from "react-icons/fa";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import toast, { Toaster } from 'react-hot-toast';
 const MovieTable = () => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
@@ -20,9 +21,12 @@ const MovieTable = () => {
 const handleDelete = async (id) => {
   await axios.delete(`http://localhost:8080/films/${id}`).then(res => {
     console.log(`${id}'s element has been deleted`);
+
+    toast.success('product deleted');
   })
   setdeleted(true)
 }
+
 
   //detail
   const handleDetail = (id) => {
@@ -106,7 +110,8 @@ const handleUpdate = (id) => {
                     <button id="buuton" onClick={()=>handleUpdate(item._id)}>
                       <FaUserEdit  />
                     </button>
-                    <button id="buuton" onClick={() => handleDetail(item._id)}>
+                    <button id="buuton" onClick={() => handleDetail(item._id)
+                    }>
                       <BiMessageSquareDetail />
                     </button>
                   </td>
@@ -115,6 +120,7 @@ const handleUpdate = (id) => {
           </tbody>
         </table>
       </div>
+      <Toaster/>
     </>
   );
 };

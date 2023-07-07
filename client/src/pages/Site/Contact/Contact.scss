@@ -18,6 +18,7 @@
   background-position: center;
   position: relative;
   margin: auto;
+  background-color: bl;
 
 }
 
@@ -56,21 +57,7 @@ font-family: Georgia, 'Times New Roman', Times, serif;}
  
 }
 
-.parkbulvar{
-  width: 300px;
-}
-.metropark{
-  width: 300px;
-  display: none;
-}
-.flametower{
-  width: 300px;
-  display: none;
-}
-.zaqulba{
-  width: 300px;
-  display: none;
-}
+
 
 
 
@@ -115,7 +102,7 @@ justify-content: start;
 
 .contact-form {
   padding: 40px;
-  width: 45%;
+  width: 500px;
   padding-bottom: 20px;
   padding-top: 20px;
 }
@@ -204,7 +191,9 @@ justify-content: start;
 }
 
 
-
+#contactt{
+  background-color: transparent;
+}
 
 .commonns{
   width: 150vh;
@@ -212,6 +201,7 @@ justify-content: start;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .button{
@@ -238,3 +228,4 @@ button{
   );
 
 }}
+

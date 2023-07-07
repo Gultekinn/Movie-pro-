@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import "../VIP/Vip.scss";
 import VipCard from "../../../component/Site/Vipcard/VipCard";
 import Loading from "../../../component/Loading/Loading";
+import { Carousel } from 'react-bootstrap';
+import { Helmet } from "react-helmet";
 
 const ViP = () => {
   const [loading, setLoading] = useState(false);
   const [filmler, setFilmler] = useState([]);
   const [seciliFilm, setSeciliFilm] = useState("");
+  const [showCardVip, setShowCardVip] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -34,8 +37,15 @@ const ViP = () => {
     console.log("Seans:", session);
   };
 
+  const handleButtonClick = () => {
+    setShowCardVip(!showCardVip);
+  };
+
   return (
     <>
+    <Helmet>
+                <title>VIP</title>
+            </Helmet>
       {loading ? (
         <Loading />
       ) : (
@@ -50,10 +60,12 @@ const ViP = () => {
 
           <div className="buttons">
             <div>
-              <button>Tabela</button>
+              
             </div>
             <div>
-              <button>Azal Club VIP Salonu</button>
+              <button id="Azal" onClick={handleButtonClick}>
+                Azal Club VIP Salonu
+              </button>
             </div>
           </div>
 
@@ -126,7 +138,33 @@ const ViP = () => {
             </div>
           </div>
 
-          <VipCard />
+          {showCardVip ? (
+            <Carousel className="CardVip">
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="https://parkcinema.az/uploads/default/files/dsc01479.jpg"
+                  alt=""
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="https://parkcinema.az/uploads/default/files/dsc01521.jpg"
+                  alt=""
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="https://parkcinema.az/uploads/default/files/dsc01510.jpg"
+                  alt=""
+                />
+              </Carousel.Item>
+            </Carousel>
+          ) : null}
+
+          {showCardVip ? null : <VipCard />}
         </div>
       )}
     </>

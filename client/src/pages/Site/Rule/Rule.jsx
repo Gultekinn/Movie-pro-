@@ -28,14 +28,14 @@ const Rule = () => {
 
 </div>
 <div className="text">
-<p>Park Cinema kinoteatrlar şəbəkəsi – müasir çox zallı kinoteatrların Azərbaycanda ən iri şəbəkəsidir. Hazırda kinoteatrlarımız Park Bulvar, Metro Park, Zagulba Mall, Flame Towers kimi tanınmış ticarət və əyləncə mərkəzlərində yerləşir. Bundan əlavə, Park Cinema Azərbaycanda açıq səmada hələki yeganə kinoteatr olan Amburan Beach Club idarə edir. 2018-ci ildə isə Masallı, Quba və Mingəçevir kimi regionlarımızda 3 kinoteatrlarımız fəaliyyətə başlamışdır. Bütün bu sadalanan kinoteatrlarda reklamınızın effektiv şəkildə yerləşdirilməsi üçün çoxlu imkanlar mövcuddur.</p></div>
+<p>Movie pro kinoteatrlar şəbəkəsi – müasir çox zallı kinoteatrların Azərbaycanda ən iri şəbəkəsidir. Hazırda kinoteatrlarımız Park Bulvar, Metro Park, Zagulba Mall, Flame Towers kimi tanınmış ticarət və əyləncə mərkəzlərində yerləşir. Bundan əlavə, Park Cinema Azərbaycanda açıq səmada hələki yeganə kinoteatr olan Amburan Beach Club idarə edir. 2018-ci ildə isə Masallı, Quba və Mingəçevir kimi regionlarımızda 3 kinoteatrlarımız fəaliyyətə başlamışdır. Bütün bu sadalanan kinoteatrlarda reklamınızın effektiv şəkildə yerləşdirilməsi üçün çoxlu imkanlar mövcuddur.</p></div>
 </div>
 </div>
 
 
 <div className="section2__text">
   <div className="textt">
-    <h3>Park Cinema kinoteatrlarında reklam yerləşdirməyin bir neçə danılmaz üstünlükləri var:
+    <h3>Movie pro kinoteatrlarında reklam yerləşdirməyin bir neçə danılmaz üstünlükləri var:
 </h3>
 <ul>
   <li>Dəqiq hədəfləmə və yüksək səviyyədə əlaqə.

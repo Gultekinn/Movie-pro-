@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Card.scss";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import { Toaster, toast } from 'react-hot-toast';
 
 const Card = () => {
   const [data, setData] = useState([]);
@@ -47,10 +49,18 @@ const Card = () => {
 
   const handlePaymentSubmit = (e) => {
     e.preventDefault();
+  
     // Ödeme işlemleri ve doğrulama
-    console.log("Payment submitted!");
+    if (!e.target.checkValidity()) {
+      toast.error('Please fill out all fields');
+      return;
+    }
+  
+    console.log('Payment submitted!');
+    toast.success('Payment complete');
     // Ödeme işlemini tamamladıktan sonra gerekli aksiyonları gerçekleştirin
   };
+  
 
   const handleTicketModalClose = () => {
     setShowTicketModal(false);
@@ -149,7 +159,7 @@ const Card = () => {
                 alt="img"
               />
             </div>
-            <h3>{item.title}</h3>
+            <Link to={`${item._id}`}><h3>{item.title}</h3></Link>   
             <p>{item.date}</p>
             <p>{item.filmType}</p>
 
@@ -183,18 +193,18 @@ const Card = () => {
                   <option value="3">3</option>
                   <option value="4">4</option>
                   <option value="5">5</option>
-                  <option value="1">6</option>
-                  <option value="2">6</option>
-                  <option value="3">7</option>
-                  <option value="4">8</option>
-                  <option value="5">9</option>
+                  <option value="6">6</option>
+                  <option value="7">6</option>
+                  <option value="8">7</option>
+                  <option value="9">8</option>
+                  <option value="10">9</option>
                 </select>
               </label>
               <label>
                 Price:
                 <input type="text" value={selectedPrice} readOnly />
               </label>
-              <button type="submit">Proceed to Seat Selection</button>
+              <button type="submit">Next</button>
             </form>
             <button onClick={handleTicketModalClose}>Close</button>
           </div>
@@ -204,7 +214,7 @@ const Card = () => {
       {showSeatModal && selectedFilm && (
         <div className="seat-modal-overlay">
           <div className="seat-modal">
-            <h2>Seat Selection</h2>
+            <h2>Seat</h2>
             <p>Film: {selectedFilm.title}</p>
             <p>Number of People: {selectedNumberOfPeople}</p>
             <div className="seat-grid">
@@ -240,7 +250,7 @@ const Card = () => {
             <form onSubmit={handlePaymentSubmit}>
               <label>
                 Card Number:
-                <input type="text" name="cardNumber" />
+                <input type="text" name="cardNumber"  placeholder="XXXX XXXX XXXX XXXX"/>
               </label>
               <label>
                 Card Holder:
@@ -252,7 +262,7 @@ const Card = () => {
               </label>
               <label>
                 CVV:
-                <input type="text" name="cvv" />
+                <input type="text" name="cvv" placeholder="XX/XX" />
               </label>
               <button type="submit">Pay</button>
             </form>
@@ -260,6 +270,7 @@ const Card = () => {
           </div>
         </div>
       )}
+      <Toaster/>
     </>
   );
 };

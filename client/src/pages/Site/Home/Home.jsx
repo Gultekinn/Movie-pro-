@@ -6,6 +6,7 @@ import Slide from "../../../component/Site/Slide/Slide";
 import Hero2 from "../../../component/Site/Hero2/Hero2";
 import "../Home/Home.scss";
 import Loading from "../../../component/Loading/Loading";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const [loading, setLoading] = useState(false);
@@ -19,6 +20,11 @@ const Home = () => {
   }, []);
   return (
     <>
+
+<Helmet>
+                <title>Home</title>
+            </Helmet>
+
       {loading ? (
         <Loading />
       ) : (

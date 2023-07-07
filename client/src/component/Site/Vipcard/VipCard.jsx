@@ -1,5 +1,6 @@
 import React from 'react'
 import '../Vipcard/vipCard.scss'
+import { Link } from 'react-router-dom'
 const VipCard = () => {
   return (
     <div>
@@ -32,6 +33,38 @@ const VipCard = () => {
 
         <div className="cardd">
           <div className="cardd__left">
+            <img src="https://parkcinema.az/uploads/structures/movies/images/hipnotic-sayt_resized.png" alt="" />
+          </div>
+          <div className="cardd__right">
+          <h2>İncimə </h2>
+         <p>06 İyul
+ <br />
+ Detektiv Denni Rurkun 7 yaşlı qızını oğurlayırlar. Cinayətkar tutulsa da uşaq tapınmamışdı. Yaranı sağaltmaq niyyəti ilə təcrübəli polis psixoterapevt yanına yazılır. Bir gün Denni və onu ilə qoşa işləyən əməkdaş bank qarəti ilə bağlı çağırış alirlar. Yerində Rurk şübhəli bir...
+
+
+         </p>
+          </div>
+        </div>
+
+
+
+        <div className="cardd">
+          <div className="cardd__left">
+            <img src="https://parkcinema.az/uploads/structures/movies/images/joy-ride-sayt_resized.png" alt="" />
+          </div>
+          <div className="cardd__right">
+            <h2>
+Əyləncəli səfər</h2>
+         <p>06 İyul
+ <br />
+ Dörd asiyalı amerikalı dost bioloji anaların axtarışında Asiyaya səfər edirlər. Bu səfərdə onlar özünü tanımaq və özünü olduğu kimi sevmək nə olduğunu öyrənəcəklər. ...
+
+
+         </p>
+          </div>
+</div>
+        <div className="cardd">
+          <div className="cardd__left">
             <img src="https://parkcinema.az/uploads/structures/movies/images/fleshshshshhshs_resized.jpg" alt="" />
           </div>
           <div className="cardd__right">
@@ -42,6 +75,14 @@ const VipCard = () => {
 
          </p>
           </div>
+
+
+
+
+
+
+
+          
         </div>
       </div>
     </div>
