@@ -159,7 +159,7 @@ const Card = () => {
                 alt="img"
               />
             </div>
-            <Link to={`${item._id}`}><h3>{item.title}</h3></Link>   
+         <h3>{item.title}</h3> 
             <p>{item.date}</p>
             <p>{item.filmType}</p>
 

@@ -28,12 +28,7 @@ const userSchema = new mongoose.Schema(
             type: Date,
             default: Date.now
         },
-        id: {
-            type: mongoose.Schema.Types.ObjectId,
-            required: true,
-        },
     },
-    
     { timestamps: true }
 );
 
