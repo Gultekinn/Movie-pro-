@@ -1,6 +1,6 @@
 Movie Ticket
 
-Bu layihə, istifadəçilərin kinoteatr biletlərini almasına imkan verən bir veb tətbiqidir. İstifadəçilər filmlər haqqında ətraflı məlumat əldə edə bilər, axtarış və filtrləmə funksiyalarından istifadə edə bilər və bilet ala bilərlər. Admin paneli vasitəsilə filmlər və istifadəçilər idarə edilə bilər. Backend hissəsi Node.js, Express və MongoDB ilə yazılmışdır. Frontend hissəsi isə React (Next.js) və Tailwind CSS istifadə edilərək responsiv şəkildə hazırlanmışdır.
+Bu layihə, istifadəçilərin kinoteatr biletlərini almasına imkan verən bir veb tətbiqidir. İstifadəçilər filmlər haqqında ətraflı məlumat əldə edə bilər, axtarış və filtrləmə funksiyalarından istifadə edə bilər və bilet ala bilərlər. Admin paneli vasitəsilə filmlər və istifadəçilər idarə edilə bilər. Backend hissəsi Node.js, Express və MongoDB ilə yazılmışdır. Frontend hissəsi isə React və SCSS istifadə edilərək responsiv şəkildə hazırlanmışdır.
 
 Frontend:
 
