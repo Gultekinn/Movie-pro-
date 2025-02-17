@@ -1,6 +1,9 @@
+require("dotenv").config();
+
 const express = require("express")
 const app = express()
 const cors = require("cors")
+
 const mongoose = require("mongoose")
 const filmRoute = require('./app/routes/Film.route')
 const cinemaRoute = require('./app/routes/Cinema.route')
@@ -18,9 +21,9 @@ const path = require('path')
 const uploadPath=path.join(__dirname,'public')
 app.use('/public',express.static(uploadPath))
 app.use(cors({credentials:true,origin:'http://localhost:3000'}))
-mongoose.connect("mongodb+srv://gultekin:gultekinn@cluster0.ez8varc.mongodb.net").then(()=>{
-    console.log("connected")
-})
+mongoose.connect(process.env.MONGO_URI).then(() => {
+    console.log("Connected to MongoDB");
+});
 
 app.use('/films',filmRoute)
 app.use('/cinemas',cinemaRoute)
